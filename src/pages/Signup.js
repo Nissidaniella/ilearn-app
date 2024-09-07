@@ -89,9 +89,11 @@ const Signup = () => {
               placeholder="Password"
             />
           </div>
-          <button onClick={handleSignUp} className="signup-button">
-            Sign up
-          </button>
+          <Link to="/timeSpent">
+            <button onClick={handleSignUp} className="signup-button">
+              Sign up
+            </button>
+          </Link>
         </form>
         <div className="signup-social-message">
           <div className="signup-line"></div>

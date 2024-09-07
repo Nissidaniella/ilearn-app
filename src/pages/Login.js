@@ -11,6 +11,10 @@ import {
   GithubAuthProvider,
   GoogleAuthProvider,
 } from "firebase/auth";
+import dashboard from "./TimeSpent";
+
+
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -75,6 +79,7 @@ const Login = () => {
               id="email"
               placeholder="email"
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
           <div className="login-input-group">
@@ -84,9 +89,10 @@ const Login = () => {
               id="password"
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
-          <Link to="/loader">
+          <Link to="/TimeSpent">
             <button onClick={handleLogin} className="login-button">
               Sign in
             </button>

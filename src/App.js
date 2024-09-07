@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Loader from './pages/Loader';
+import TimeSpent from './pages/TimeSpent';
 
 export function App() {
 
@@ -16,7 +17,7 @@ export function App() {
     const timer = setTimeout(() => {
       setLoading(false);
       navigate('/signup');  // Navigate to /signup
-    }, 30000);
+    }, 3000);
 
     // Cleanup the timer on component unmount
     return () => clearTimeout(timer);
@@ -37,7 +38,7 @@ export default function AppWrapper() {
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/signup" element={<Signup />} /> {/* Define /signup route */}
+        <Route path="/signup" element={<Signup />} /> 
         <Route path="/login" element={
           <>
             <Helmet>
@@ -46,6 +47,17 @@ export default function AppWrapper() {
             <Login />
           </>
         } />
+
+        <Route path="/timeSpent" element={
+          <>
+            <Helmet>
+              <title>TimeSpent</title>
+            </Helmet>
+            <TimeSpent />
+          </>
+
+        }/>
+       
       </Routes>
     </Router>
   );
