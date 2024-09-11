@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import image from "../images/logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGrip, faSwatchbook, faClipboardList, faBarsProgress, faMessage, faBell, faGear } from '@fortawesome/free-solid-svg-icons'
+
 export default function Notifications() {
   return (
+    <>
     <div className='notifications'>  
 <div class="menu-card playing">
   
@@ -75,6 +77,8 @@ export default function Notifications() {
 
 
     </div>
+
+</>
   );
 }
 

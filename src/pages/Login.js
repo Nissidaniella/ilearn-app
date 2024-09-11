@@ -29,6 +29,7 @@ export default function Login() {
               name="password"
               id="password"
               placeholder="Password"
+              
             />
           </div>
           <Link to="/loader">

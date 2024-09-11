@@ -1,25 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../index.css";
 import { Link } from "react-router-dom";
 import image from "../images/logo.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGrip, faSwatchbook, faClipboardList, faBarsProgress, faMessage, faBell, faGear } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGrip,
+  faSwatchbook,
+  faClipboardList,
+  faBarsProgress,
+  faMessage,
+  faBell,
+  faGear,
+} from "@fortawesome/free-solid-svg-icons";
+import Buttons from "../components/Buttons";
+import ProfileSettings from "../components/ProfileSettings";
+import SecuritySettings from '../components/SecuritySettings';
+import Notifications from '../components/Notifications';
+import Password from '../components/Password';
+import DeleteAccount from '../components/DeleteAccount';
+import Navbar from "../components/Navbar";
+import SettingsImg from '../images/Settingspic.png';
+
 export default function Settings() {
+  const tabs = ['profile', 'security', 'notifications', 'password', 'deleteAccount'];
+  const [activeTab, setActiveTab] = useState(tabs[0]);
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
+    
   return (
-    <div className='settings'>  
-<div class="menu-card playing">
-  
-  
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  
-  
+    <div className="settings">
+      <div class="menu-card playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
 
-      <div class="menu-content">
-
-   
-  <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674
+        <div class="menu-content">
+          <path
+            fill="currentColor"
+            d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674
   4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368
   21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204
   22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651
@@ -32,50 +52,122 @@ export default function Settings() {
   15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864
   19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528
    16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68
-   20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path>    
+   20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"
+          ></path>
 
-   <div className='logo'><img src={image} alt="Logo-image" /></div>
-        <div className='menu'>
-          <ul>
-          <li>
-          <FontAwesomeIcon icon={faGrip} className='icon'/> 
-          <Link to="/dashboard" className="menu-link">Dashboard</Link></li>
-
-            <li>
-            <FontAwesomeIcon icon={faSwatchbook} className='icon' />
-            <Link to="/courses" className="menu-link">My Courses</Link>
-             </li>
-
-            <li>
-            <FontAwesomeIcon icon={faClipboardList} className='icon' /><Link to="/classes" className="menu-link">My Classes</Link>
+          <div className="logo">
+            <img src={image} alt="Logo-image" />
+          </div>
+          <div className="menu">
+            <ul>
+              <li>
+                <FontAwesomeIcon icon={faGrip} className="icon" />
+                <Link to="/dashboard" className="menu-link">
+                  Dashboard
+                </Link>
               </li>
 
-            <li>
-            <FontAwesomeIcon icon={faBarsProgress} className='icon' />
-            <Link to="/progress" className="menu-link">Progress</Link></li>
+              <li>
+                <FontAwesomeIcon icon={faSwatchbook} className="icon" />
+                <Link to="/courses" className="menu-link">
+                  My Courses
+                </Link>
+              </li>
 
-            <li> <FontAwesomeIcon icon={faMessage} className='icon' />
-            <Link to="/messages" className="menu-link">Messages</Link></li>
+              <li>
+                <FontAwesomeIcon icon={faClipboardList} className="icon" />
+                <Link to="/classes" className="menu-link">
+                  My Classes
+                </Link>
+              </li>
 
-            <li>
-            <FontAwesomeIcon icon={faBell} className='icon'/>
-            <Link to="/notifications" className="menu-link">Notifications</Link></li>
+              <li>
+                <FontAwesomeIcon icon={faBarsProgress} className="icon" />
+                <Link to="/progress" className="menu-link">
+                  Progress
+                </Link>
+              </li>
 
-            <li className="active">
-            <FontAwesomeIcon icon={faGear} size="xl" style={{ marginRight: '8px' }} />
-            Settings</li>
-          </ul>
+              <li>
+                {" "}
+                <FontAwesomeIcon icon={faMessage} className="icon" />
+                <Link to="/messages" className="menu-link">
+                  Messages
+                </Link>
+              </li>
+
+              <li>
+                <FontAwesomeIcon icon={faBell} className="icon" />
+                <Link to="/notifications" className="menu-link">
+                  Notifications
+                </Link>
+              </li>
+
+              <li className="active">
+                <FontAwesomeIcon
+                  icon={faGear}
+                  size="xl"
+                  style={{ marginRight: "8px" }}
+                />
+                Settings
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+     
+    
+    <div className="settings-content">
 
-  </div>
+    <Navbar/>
+    <div className="flex mt-[15px] ">
+     <div className="settings-menu">
+        <button
+          className={activeTab === 'profile' ? 'active' : ''}
+          onClick={() => handleTabChange('profile')}
+        >
+          Profile Settings
+        </button>
+        <button
+          className={activeTab === 'security' ? 'active' : ''}
+          onClick={() => handleTabChange('security')}
+        >
+          Security Settings
+        </button>
+        <button
+          className={activeTab === 'notifications' ? 'active' : ''}
+          onClick={() => handleTabChange('notifications')}
+        >
+          Notifications
+        </button>
+        <button
+          className={activeTab === 'password' ? 'active' : ''}
+          onClick={() => handleTabChange('password')}
+        >
+          Password
+        </button>
+        <button
+          className={activeTab === 'deleteAccount' ? 'active' : ''}
+          onClick={() => handleTabChange('deleteAccount')}
+        >
+          Delete Account
+        </button> 
+        <img src={SettingsImg} alt="Settings" className="mt-6"  />
+
+      </div>
+      <div className="content-section">
+        {activeTab === 'profile' && <ProfileSettings />}
+        {activeTab === 'security' && <SecuritySettings />}
+        {activeTab === 'notifications' && <Notifications />}
+        {activeTab === 'password' && <Password />}
+        {activeTab === 'deleteAccount' && <DeleteAccount />}
+       
+      </div>
+      
 </div>
 
-
-
-
+ </div>
 
     </div>
   );
 }
-
-

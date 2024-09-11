@@ -13,6 +13,7 @@ import Notifications from './pages/Notifications';
 import Settings from './pages/Settings';
 
 
+
 function App() {
   return (
     <Router>
@@ -93,6 +94,8 @@ function App() {
               <title>Notifications Page</title>
             </Helmet>
             <Notifications />
+            
+            
           </>
         } />
 
