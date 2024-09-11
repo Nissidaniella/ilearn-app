@@ -472,3 +472,143 @@
 }
 
 /* end of signup css */
+
+.menu-card {
+  margin: 20px;
+  background-color: #020baa;
+  box-shadow: 0px 8px 28px -9px rgb(0, 0, 0);
+  position: fixed;
+  width: 240px;
+  height: 630px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  width: 540px;
+  height: 700px;
+  opacity: 0.6;
+  left: 0;
+  top: 0;
+  margin-left: -50%;
+  margin-top: -70%;
+  background: linear-gradient(744deg,#4069ff,#e50d0df5 60%,#eb005684);
+}
+
+
+.menu-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.menu-content .logo{
+  z-index:0;
+  width: 150px;
+  margin-bottom: 10px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.menu-content .menu ul{
+  display: flex;
+ font-size: 16px;
+ font-weight: 100;
+  flex-direction: column;
+  gap:15px ;
+  color: white;
+
+}
+
+.menu-content .menu li{
+  margin: 5px 4px;
+}
+
+.menu .icon {
+  margin-right: 8px;
+  font-size: 20px; 
+
+}
+
+.menu .active {
+  position: relative;
+
+
+}
+
+
+
+.menu-link {
+  position: relative;
+  display: inline-block;
+  color: rgb(255, 255, 255); 
+  text-decoration: none;
+}
+
+.menu-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255); 
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.menu-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+.wave:nth-child(2),
+.wave:nth-child(3) {
+  top: 260px;
+  opacity: 0.5;
+  height:450px ;
+
+}
+
+.playing .wave {
+  border-radius: 40%;
+  animation: wave 3000ms infinite linear;
+}
+
+.wave {
+  border-radius: 60%;
+  animation: wave 40s infinite linear;
+}
+
+.playing .wave:nth-child(2) {
+  animation-duration: 6000ms;
+}
+
+.wave:nth-child(2) {
+  animation-duration: 50s;
+}
+
+.playing .wave:nth-child(3) {
+  animation-duration: 5000ms;
+}
+
+.wave:nth-child(3) {
+  animation-duration: 45s;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* end of menu css */

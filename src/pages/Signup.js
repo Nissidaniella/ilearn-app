@@ -89,7 +89,7 @@ const Signup = () => {
               placeholder="Password"
             />
           </div>
-          <Link to="/timeSpent">
+          <Link to="/dashboard">
             <button onClick={handleSignUp} className="signup-button">
               Sign up
             </button>
