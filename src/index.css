@@ -473,40 +473,22 @@
 
 /* end of signup css */
 
-
-
-/* menu css */
-
 .menu-card {
   margin: 20px;
   background-color: #020baa;
   box-shadow: 0px 8px 28px -9px rgb(0, 0, 0);
-  position: relative;
   width: 240px;
   height: 630px;
   border-radius: 16px;
   overflow: hidden;
 }
 
-.wave {
-  position: absolute;
-  width: 540px;
-  height: 700px;
-  opacity: 0.6;
-  left: 0;
-  top: 0;
-  margin-left: -50%;
-  margin-top: -70%;
-  background: linear-gradient(744deg,#4069ff,#e50d0df5 60%,#eb005684);
-}
-
-
 .menu-content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
- 
+
 }
 
 .menu-content .logo{
@@ -515,6 +497,7 @@
   margin-bottom: 10px;
   margin: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.856);
 }
 
 .menu-content .menu ul{
@@ -524,7 +507,7 @@
   flex-direction: column;
   gap:15px ;
   color: white;
-  
+
 }
 
 .menu-content .menu li{
@@ -534,11 +517,13 @@
 .menu .icon {
   margin-right: 8px;
   font-size: 20px; 
-  
+
 }
 
 .menu .active {
-  position: relative;  
+  position: relative;
+
+
 }
 
 
@@ -558,7 +543,7 @@
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: rgb(255, 255, 255); 
+  background-color: rgb(254, 1, 1); 
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -620,7 +605,6 @@
 /* dashboard css */
 .dashboard{
   display: flex;
-  
 }
 
 /* navbar css */
@@ -861,7 +845,6 @@ font-weight: 500;
   border-radius: 16px;
   color: white;
   cursor: pointer;
-  transition: 400ms transform, 400ms box-shadow, 400ms background-color;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -874,47 +857,10 @@ font-weight: 500;
   font-size: 0.7em;
 }
 
-.cards .card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #333;
-}
-
-.cards:hover > .card:not(:hover) {
-  filter: blur(10px);
-  transform: scale(0.9);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
 
 
-.dashboard-section1 .teacher{
-  background-color: #0cde64;
-  width: 40%;
-}
 
-.dashboard-section2{
-  background-color: #6d6d0f;
-  height: 200px; 
-  display: flex;
-}
 
-.dashboard-section2 .activity{
-  width: 60%;
-  background-color: #ff0000;
-  display: flex;
-  gap: 5px;
-}
-
-.dashboard-section2 .hours-activity{
-  background-color: #007FFF;
-  width: 50%;
-}
-
-.dashboard-section2 .daily-schedule{
-  background-color: #007FFF;
-  width: 50%;
-}
 
 
 /* end of dashboard css */
