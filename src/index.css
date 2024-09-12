@@ -719,28 +719,25 @@
 
 }
 
-.dashboard-section1{
-  align-items: center;
-  margin: 15px 0;
-  gap: 10px;
-  background-color: #020baa;
- 
+.dashboard-container {
+  background-color: #f7000043;
+  border-radius: 16px;
+  margin:20px 0;
+  height: 550px;
 }
 
-.dashboard-section1 .courses-link{
+.dashboard-container .courses-link{
   width: 60%;
-  height: 160px;
-
+  padding: 20px;
 }
 
-.dashboard-section1 .courses-link-heading
+.dashboard-container .courses-link-heading
 {
 display: flex;
 justify-content: space-between;
-margin:0 20px;
 }
 
-.dashboard-section1 .courses-link-heading h1
+.dashboard-container .courses-link-heading h1
 {
 font-weight: 500;
 }
@@ -820,6 +817,7 @@ font-weight: 500;
   gap: 15px;
   justify-content: center;
   margin-top: 10px;
+  
 }
 
 .cards .red {
@@ -859,8 +857,118 @@ font-weight: 500;
 
 
 
+.profile-card {
+  height: 97%;
+  width: 97%;
+  perspective: 1000px;
+  margin: 10px;
+}
+
+.profile-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.profile-card:hover .profile-card-inner {
+  transform: rotateY(180deg);
+}
+
+.profile-card-front,
+.profile-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.profile-card-front {
+  background-color: #394897;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  transform: rotateY(0deg);
+  padding: 10px;
+  color: white;
+  
+ 
+}
+
+.profile-card-back {
+  background-color: #000000;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+ 
+  padding: 10px;
+  color: white;
+}
+
+.profile-front{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-front h1{
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin-top: 10px;
+}
+
+ .profile-front img{
+  background-color: #000000;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.profile-front h2{
+  margin-top: 20px;
+  font-size: 20px;
+  border-bottom: 2px solid red ;
+  
+}
+
+.edu img{
+  width: 250px;
+  background-color: transparent;
+  margin-top: -40px;
+}
 
 
+
+
+.profile-back{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.profile-back h1{
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+.profile-back p{
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.profile-back input{
+  color: #ffffff;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  padding: 10px 0;
+  outline: none;
+}
 
 
 /* end of dashboard css */
