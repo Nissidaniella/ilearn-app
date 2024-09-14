@@ -22,7 +22,9 @@ export default function Signup() {
         <input type="password" name="password" id="password" placeholder="Password" />
        
       </div>
+      <Link to="/dashboard">
       <button className="signup-button">Sign up</button>
+      </Link>
     </form>
     <div className="signup-social-message">
       <div className="signup-line"></div>

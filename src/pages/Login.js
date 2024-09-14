@@ -29,6 +29,7 @@ export default function Login() {
               name="password"
               id="password"
               placeholder="Password"
+              
             />
           </div>
           <Link to="/loader">
@@ -71,7 +72,7 @@ export default function Login() {
         </div>
         <p className="login-signup">
           Don't have an account?
-          <Link to="/Signup">
+          <Link to="/signup">
             <a rel="noopener noreferrer" href="#">
               Sign up
             </a>
