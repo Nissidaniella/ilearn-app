@@ -11,7 +11,7 @@ import {
   GithubAuthProvider,
   GoogleAuthProvider,
 } from "firebase/auth";
-import dashboard from "./TimeSpent";
+import dashboard from "./Dashboard";
 
 
 
@@ -92,7 +92,7 @@ const Login = () => {
               required
             />
           </div>
-          <Link to="/TimeSpent">
+          <Link to="/dashboard">
             <button onClick={handleLogin} className="login-button">
               Sign in
             </button>

@@ -5,7 +5,10 @@ export default {
     "./src/**/*.{js,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+      },
+    },
   },
   plugins: [],
 }

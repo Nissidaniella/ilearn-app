@@ -1,9 +1,19 @@
 import React, { useContext, useState, useEffect } from 'react';
 import ContextProvider, { Context } from '../Context/Context';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGrip, faSwatchbook, faClipboardList, faBarsProgress, faMessage, faBell, faGear } from '@fortawesome/free-solid-svg-icons';
+
 
 const ChatBox = () => {
   const { onSent, recentPrompt, showResult, loading, resultData, setInput, input } = useContext(Context);
 
+  const Sidebar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const toggleSidebar = () => {
+      setIsOpen(!isOpen);
+    };
+  }
   // State to store only the latest conversation
   const [history, setHistory] = useState([]);
   const [selectedConversation, setSelectedConversation] = useState(null);
@@ -64,9 +74,10 @@ const ChatBox = () => {
 
   return (
     <div className="flex h-screen bg-gray-100">
-      {/* Sidebar for Recent Conversations */}
-      <div className="w-1/4 bg-white shadow-lg overflow-y-auto p-4">
-        <h2 className="text-lg font-semibold mb-4">Recent Conversations</h2>
+
+          {/* Sidebar for Recent Conversations */}
+      <div className="w-1/4 bg-white shadow-lg overflow-y-auto p-4 ">
+        <h2 className="text-lg font-semibold mt-6">Recent Conversations</h2>
         <div className="space-y-3">
           {history.length === 0 ? (
             <p className="text-gray-500">No recent conversations</p>
@@ -97,6 +108,9 @@ const ChatBox = () => {
           )}
         </div>
       </div>
+
+      
+
 
       {/* Main Chat Area */}
       <div className="flex-1 flex flex-col justify-between bg-white shadow-lg p-4">

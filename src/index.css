@@ -473,11 +473,15 @@
 
 /* end of signup css */
 
+
+
+/* menu css */
+
 .menu-card {
   margin: 20px;
   background-color: #020baa;
   box-shadow: 0px 8px 28px -9px rgb(0, 0, 0);
-  position: fixed;
+  position: relative;
   width: 240px;
   height: 630px;
   border-radius: 16px;
@@ -502,7 +506,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+ 
 }
 
 .menu-content .logo{
@@ -520,7 +524,7 @@
   flex-direction: column;
   gap:15px ;
   color: white;
-
+  
 }
 
 .menu-content .menu li{
@@ -530,13 +534,11 @@
 .menu .icon {
   margin-right: 8px;
   font-size: 20px; 
-
+  
 }
 
 .menu .active {
-  position: relative;
-
-
+  position: relative;  
 }
 
 
@@ -572,7 +574,7 @@
   top: 260px;
   opacity: 0.5;
   height:450px ;
-
+  
 }
 
 .playing .wave {
@@ -612,3 +614,631 @@
 }
 
 /* end of menu css */
+
+
+
+/* dashboard css */
+.dashboard{
+  display: flex;
+  
+}
+
+/* navbar css */
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  height: 60px;
+  gap: 100px;
+  background-color: #8605050f;
+  border-radius: 16px;
+  width: 100;
+}
+
+.search-container {
+  position: relative;
+  width: 200px;
+}
+
+.search-container input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #222;
+  padding: 3px;
+}
+
+.search-container label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(105, 105, 105, 0.7);
+  pointer-events: none;
+  transition: .5s;
+  
+}
+
+.search-container input:valid ~ label,
+.search-container input:focus ~ label {
+  color: rgb(10, 131, 212);
+  transform: translateY(-15px);
+  font-size: .6rem;
+}
+
+.search-container i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #222;
+}
+
+.search-container i:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ff1b69, rgb(0, 213, 255), #f32180, #0270ab, #ff1b69);
+  animation: animate 3s linear infinite;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+ padding: 0 10px;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ margin-left: 40px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  border-left: 2px solid red;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+ color: #f93617;
+}
+
+/* dashboard css */
+.dashboard-content{
+  width: 75%;
+  margin: 20px;
+
+}
+
+.dashboard-section1{
+  align-items: center;
+  margin: 15px 0;
+  gap: 10px;
+  background-color: #020baa;
+ 
+}
+
+.dashboard-section1 .courses-link{
+  width: 60%;
+  height: 160px;
+
+}
+
+.dashboard-section1 .courses-link-heading
+{
+display: flex;
+justify-content: space-between;
+margin:0 20px;
+}
+
+.dashboard-section1 .courses-link-heading h1
+{
+font-weight: 500;
+}
+
+
+.c-button {
+  color: #000;
+  font-weight: 700;
+  font-size: 6px;
+  text-decoration: none;
+  padding: 0.9em 1.6em;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+}
+
+.c-button--gooey {
+  color: #16181b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 4px solid #d90688;
+  border-radius: 0;
+  position: relative;
+  transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+}
+
+.c-button--gooey .c-button__blobs div {
+  background-color: #d9068c;
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+  color: #fff;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}
+
+
+.cards {
+  display: flex;
+  flex-direction: colum;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.cards .red {
+  background-color: #f43f5e;
+}
+
+.cards .blue {
+  background-color: #3b82f6;
+}
+
+.cards .green {
+  background-color: #22c55e;
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 120px;
+  width: 170px;
+  border-radius: 16px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms transform, 400ms box-shadow, 400ms background-color;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cards .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.cards .card p.second-text {
+  font-size: 0.7em;
+}
+
+.cards .card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #333;
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.dashboard-section1 .teacher{
+  background-color: #0cde64;
+  width: 40%;
+}
+
+.dashboard-section2{
+  background-color: #6d6d0f;
+  height: 200px; 
+  display: flex;
+}
+
+.dashboard-section2 .activity{
+  width: 60%;
+  background-color: #ff0000;
+  display: flex;
+  gap: 5px;
+}
+
+.dashboard-section2 .hours-activity{
+  background-color: #007FFF;
+  width: 50%;
+}
+
+.dashboard-section2 .daily-schedule{
+  background-color: #007FFF;
+  width: 50%;
+}
+
+
+/* end of dashboard css */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* settings menu css */
+.settings{
+  display: flex;
+  flex-direction: row;
+}
+
+.settings-content {
+  margin: 20px;
+  height: auto; 
+  border-radius: 16px;
+width: 960px;
+  display: flex;
+  flex-direction: column;
+ 
+  
+}
+
+.settings-menu {
+  width: 200px;
+  height: 100%;
+  background-color:#378dfe5a;
+  color: #fff;
+  padding: 20px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+ 
+  
+}
+
+.settings-menu button {
+  width: 197px;
+  font-size: 14px;
+  height: 40px;
+  padding: 0 20px;
+  margin-left: -17px;
+  border-radius: 20px 20px 0 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  text-align: start;
+}
+
+.settings-menu button.active {
+  background-color: #3525e5;
+  color: #fff;
+  position: relative;
+}
+
+/* end of settings menu css */
+
+/* profile settings css */
+.content-section {
+  width: 100%;
+  height: 555px;
+  background-color: #378dfe8e;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  color: #000000;
+ 
+}
+
+.PS {
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 20px 58px;
+ 
+ }
+
+ .profileS-container {
+  max-width: 650px;
+  margin: auto;
+}
+
+/* Style form labels */
+.profileS-container label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Style input fields */
+.profileS-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+
+.SA{
+  margin-top: 25px;
+  margin-left: 63px;
+
+}
+
+.card {
+  display: flex;
+  height: 40px;
+  width: 150px;
+  
+}
+
+.card svg {
+  position: absolute;
+  display: flex;
+  width: 60%;
+  height: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.card .social-link1,.card .social-link2,.card .social-link3,.card .social-link4 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  color: whitesmoke;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+  border-radius: 50px;
+}
+
+.card svg {
+  transform: scale(1);
+}
+
+.card .social-link1:hover {
+  background-color: #1a1e22;
+  animation: bounce_613 0.4s linear;
+}
+
+.card .social-link2:hover {
+  background-color: #0a66c2;
+  animation: bounce_613 0.4s linear;
+}
+
+.card .social-link3:hover {
+  background-color: #0059f7;
+  animation: bounce_613 0.4s linear;
+}
+
+.card .social-link4:hover {
+  background-color: #1d4292;
+  animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.gap{
+  gap: 260px;
+  justify-content: space-around;
+}
+
+/* end of profile settings css */
+
+
+/* start of security settings css */
+.authentication-container {
+  max-width: 400px;
+  margin: auto;
+}
+
+
+.authentication-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.authentication-container label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.authentication-container input {
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/* end of security settings css */
+
+/* start of notification css */
+.notification-container{
+  max-width: 600px;
+  height:300px ;
+  margin: auto;
+}
+
+.notification-container label{
+  background-color: #d5d6e04a;
+  width: 400px;
+  height: 100px;
+  border-radius: 16px;
+  padding: 18px ;
+}
+
+.notification-container label p{
+  color: #7f7f7f;
+  font-size: 13px;
+}
+.my-form {
+  --_clr-primary: #fffcfc;
+  --_clr-hover: #f33195;
+  --_clr-checked: #127acf;
+}
+.my-form > div {
+  --_clr-current: var(--_clr-primary);
+
+  display: flex;
+  gap: 0.5rem;
+  padding: 10px;
+  font-size: 20px;
+}
+.my-form > div + div {
+  margin-block-start: 0.5rem;
+}
+.my-form label {
+  cursor: pointer;
+  color: var(--_clr-current);
+  transition: color 150ms ease-in-out;
+}
+
+/* styled checkbox */
+.my-form input[type="checkbox"] {
+  appearance: none;
+  outline: none;
+  width: 2rem;
+  height: 2rem;
+  aspect-ratio: 1;
+  padding: 0.25rem;
+  background: transparent;
+  border: 1px solid var(--_clr-current);
+  border-radius: 2px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.my-form input[type="checkbox"]::after {
+  content: "\2714";
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  color: var(--_clr-checked);
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.my-form label:hover,
+.my-form input[type="checkbox"]:focus-visible,
+.my-form input[type="checkbox"]:focus-visible + label,
+.my-form input[type="checkbox"]:hover,
+.my-form input[type="checkbox"]:hover + label {
+  --_clr-current: var(--_clr-hover);
+}
+.my-form input[type="checkbox"]:focus-visible::after,
+.my-form input[type="checkbox"]:hover::after {
+  opacity: 0.5;
+  color: var(--_clr-hover);
+}
+
+.my-form input[type="checkbox"]:checked + label:not(:hover),
+.my-form input[type="checkbox"]:checked:not(:hover) {
+  --_clr-current: var(--_clr-checked);
+}
+.my-form input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+
+/* end of notifications css */
