@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Buttons = () => {
    return (
     <>
-    <Link to ="/courses">
+   
        <div className="c-button c-button--gooey">
       View all
 
@@ -26,7 +26,7 @@ const Buttons = () => {
         </defs>
       </svg>
     </div>
-    </Link>
+   
     </>
   );
 };

@@ -110,25 +110,40 @@ export default function Dashboard() {
 
             <div className="time-video flex">
               <div className="time bg-white"> timeee</div>
-              <div className="video bg-black">vod</div>
+              <div className="video bg-white">vod</div>
             </div>
 
-            <div className="assignments"></div>
+            <div className="assignments">
+            <div className="courses-link-heading">
+              {" "}
+              <h1>Available Classes</h1>
+              <Link to="/classes" className="button-link">
+                <Buttons />
+              </Link>
+            </div>
+              
+              <a class="btn" href="#">
+                I am a button
+              </a>
+
+              <a class="btn" href="#">
+                I am a button
+              </a>
+              
+            </div>
           </div>
 
           <div className="profile-card">
             <div className="profile-card-inner">
               <div className="profile-card-front">
-                <ProfileFront/>
+                <ProfileFront />
               </div>
               <div className="profile-card-back">
-                <ProfileBack/>
+                <ProfileBack />
               </div>
             </div>
           </div>
         </div>
-
-       
       </div>
     </div>
   );

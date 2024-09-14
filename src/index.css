@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body{
+  background-color: hsla(180, 6%, 3%, 0.965);
+}
 
 
 /*loader css*/
@@ -615,7 +617,7 @@
   padding: 0px 50px;
   height: 60px;
   gap: 100px;
-  background-color: #8605050f;
+  background-color: #ffffff;
   border-radius: 16px;
   width: 100;
 }
@@ -715,12 +717,105 @@
 /* dashboard css */
 .dashboard-content{
   width: 75%;
-  margin: 20px;
+  margin: 20px;/* From Uiverse.io by zjssun */ 
+.button {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #7d2ae8;
+  transition: all 0.2s ease;
+}
+
+.button:active {
+  transform: scale(0.96);
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
 
 }
 
 .dashboard-container {
-  background-color: #f7000043;
+  background-color: rgb(218, 219, 243);
   border-radius: 16px;
   margin:20px 0;
   height: 550px;
@@ -760,7 +855,7 @@ font-weight: 500;
   color: #16181b;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border: 4px solid #d90688;
+  border: 4px solid rgb(246, 27, 1);
   border-radius: 0;
   position: relative;
   transition: all 700ms ease;
@@ -779,7 +874,7 @@ font-weight: 500;
 }
 
 .c-button--gooey .c-button__blobs div {
-  background-color: #d9068c;
+  background-color: rgb(246, 27, 1);
   width: 34%;
   height: 100%;
   border-radius: 100%;
@@ -821,15 +916,15 @@ font-weight: 500;
 }
 
 .cards .red {
-  background-color: #f43f5e;
+  background-color: #ffffff;
 }
 
 .cards .blue {
-  background-color: #3b82f6;
+  background-color: #ffffff;
 }
 
 .cards .green {
-  background-color: #22c55e;
+  background-color: #ffffff;
 }
 
 .cards .card {
@@ -856,6 +951,101 @@ font-weight: 500;
 }
 
 
+.time-video{
+  margin: 20px 0;
+  height: 175px;
+  gap: 15px;
+}
+
+.time-video .time {
+  width: 50%;
+  border-radius: 16px;
+}
+
+.time-video .video {
+  width: 50%;
+  border-radius: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.assignments{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  height: 150px;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  border: 1px solid rgb(2, 11, 170);
+  border-radius: 16px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+  
+ }
+ 
+ .btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F61B01;
+  transform: translateX(-100%);
+  transition: all .3s;
+  z-index: -1;
+ }
+ 
+ .btn:hover::before {
+  transform: translateX(0);
+ }
+
+
+/* start of profile css */
 
 .profile-card {
   height: 97%;
@@ -885,7 +1075,7 @@ font-weight: 500;
 }
 
 .profile-card-front {
-  background-color: #394897;
+  background-color:rgb(2, 11, 170);
   display: flex;
   align-items: center;
   border-radius: 10px;
@@ -904,7 +1094,6 @@ font-weight: 500;
   align-items: center;
   justify-content: center;
   transform: rotateY(180deg);
- 
   padding: 10px;
   color: white;
 }
@@ -918,7 +1107,7 @@ font-weight: 500;
 .profile-front h1{
   font-size: 2.5rem;
   font-weight: 100;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
  .profile-front img{
@@ -932,7 +1121,7 @@ font-weight: 500;
 .profile-front h2{
   margin-top: 20px;
   font-size: 20px;
-  border-bottom: 2px solid red ;
+  border-bottom: 2px solid #F61B01 ;
   
 }
 
@@ -942,19 +1131,16 @@ font-weight: 500;
   margin-top: -40px;
 }
 
-
-
-
 .profile-back{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .profile-back h1{
-  font-size: 2.5rem;
+  font-size: 2.9rem;
   font-weight: 100;
 }
 .profile-back p{
@@ -969,6 +1155,8 @@ font-weight: 500;
   padding: 10px 0;
   outline: none;
 }
+
+/* end of profile css */
 
 
 /* end of dashboard css */
@@ -1049,7 +1237,7 @@ width: 960px;
 }
 
 .settings-menu button.active {
-  background-color: #3525e5;
+  background-color:#F61B01;
   color: #fff;
   position: relative;
 }
@@ -1060,7 +1248,7 @@ width: 960px;
 .content-section {
   width: 100%;
   height: 555px;
-  background-color: #378dfe8e;
+  background-color:rgb(218, 219, 243);
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   color: #000000;
@@ -1092,7 +1280,7 @@ width: 960px;
   margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  
+  background-color: rgb(255, 255, 255);
 }
 
 .SA{
@@ -1217,7 +1405,7 @@ width: 960px;
 }
 
 .notification-container label{
-  background-color: #d5d6e04a;
+  background-color:rgb(2, 11, 170);
   width: 400px;
   height: 100px;
   border-radius: 16px;
@@ -1229,9 +1417,9 @@ width: 960px;
   font-size: 13px;
 }
 .my-form {
-  --_clr-primary: #fffcfc;
-  --_clr-hover: #f33195;
-  --_clr-checked: #127acf;
+  --_clr-primary: #ffffff;
+  --_clr-hover: #fa1919;
+  --_clr-checked: #cf1212;
 }
 .my-form > div {
   --_clr-current: var(--_clr-primary);
