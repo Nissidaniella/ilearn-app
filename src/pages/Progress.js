@@ -4,17 +4,12 @@ import { Link } from "react-router-dom";
 import image from "../images/logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGrip, faSwatchbook, faClipboardList, faBarsProgress, faMessage, faBell, faGear } from '@fortawesome/free-solid-svg-icons'
+import TimeSpent from "./TimeSpent";
 export default function Progress() {
   return (
     <div className='progress'>  
-<div class="menu-card playing">
-  
-  
-
-  
-  
-
-      <div class="menu-content"> 
+<div class="menu-card">
+   <div class="menu-content"> 
 
    <div className='logo'><img src={image} alt="Logo-image" /></div>
         <div className='menu'>
@@ -50,11 +45,12 @@ export default function Progress() {
         </div>
 
   </div>
+
 </div>
 
 
 
-
+<TimeSpent/>
 
     </div>
   );

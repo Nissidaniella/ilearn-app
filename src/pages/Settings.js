@@ -12,7 +12,6 @@ import {
   faBell,
   faGear,
 } from "@fortawesome/free-solid-svg-icons";
-import Buttons from "../components/Buttons";
 import ProfileSettings from "../components/ProfileSettings";
 import SecuritySettings from '../components/SecuritySettings';
 import Notifications from '../components/Notifications';
