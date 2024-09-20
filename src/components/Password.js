@@ -42,8 +42,12 @@ const Password = () => {
 
   return (
     <>
+
+    <div className="password-container">
+      
+    </div>
       <h2 className="PS">Change Password</h2>
-      <div className="max-w-md mx-auto p-4 rounded-lg shadow-md">
+      <div className="max-w-md mx-auto p-4 password">
         <form onSubmit={handleSubmit}>
           {/* Current Password */}
           <label className="block mb-2">
@@ -53,7 +57,7 @@ const Password = () => {
                 type={showCurrentPassword ? 'text' : 'password'}
                 value={currentPassword}
                 onChange={handleCurrentPasswordChange}
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
               />
               <FontAwesomeIcon
                 icon={showCurrentPassword ? faEyeSlash : faEye}
@@ -71,7 +75,7 @@ const Password = () => {
                 type={showNewPassword ? 'text' : 'password'}
                 value={newPassword}
                 onChange={handleNewPasswordChange}
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
               />
               <FontAwesomeIcon
                 icon={showNewPassword ? faEyeSlash : faEye}
@@ -82,14 +86,14 @@ const Password = () => {
           </label>
 
           {/* Confirm New Password */}
-          <label className="block mb-4">
+          <label className="block mb-4 ">
             Confirm New Password:
             <div className="relative">
               <input
                 type={showConfirmNewPassword ? 'text' : 'password'}
                 value={confirmNewPassword}
                 onChange={handleConfirmNewPasswordChange}
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
               />
               <FontAwesomeIcon
                 icon={showConfirmNewPassword ? faEyeSlash : faEye}

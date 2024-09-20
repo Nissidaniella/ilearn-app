@@ -14,7 +14,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ProfileSettings from "../components/ProfileSettings";
 import SecuritySettings from '../components/SecuritySettings';
-import Notifications from '../components/Notifications';
 import Password from '../components/Password';
 import DeleteAccount from '../components/DeleteAccount';
 import Navbar from "../components/Navbar";
@@ -113,12 +112,7 @@ export default function Settings() {
         >
           Security Settings
         </button>
-        <button
-          className={activeTab === 'notifications' ? 'active' : ''}
-          onClick={() => handleTabChange('notifications')}
-        >
-          Notifications
-        </button>
+      
         <button
           className={activeTab === 'password' ? 'active' : ''}
           onClick={() => handleTabChange('password')}
@@ -137,7 +131,6 @@ export default function Settings() {
       <div className="content-section">
         {activeTab === 'profile' && <ProfileSettings />}
         {activeTab === 'security' && <SecuritySettings />}
-        {activeTab === 'notifications' && <Notifications />}
         {activeTab === 'password' && <Password />}
         {activeTab === 'deleteAccount' && <DeleteAccount />}
        

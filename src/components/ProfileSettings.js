@@ -9,8 +9,8 @@ const ProfileSettings = () => {
       <form className="profileS-container">
         <div>
         <div className="form-group  ">
-          <label htmlFor="first-name">First Name:</label>
-         
+          <label htmlFor="first-name">First Name</label>
+         <br></br>
           <input type="text" id="first-name" name="first-name" placeholder="John" className='settings-placeholder' />
         </div>
         
@@ -18,8 +18,8 @@ const ProfileSettings = () => {
 
 
         <div className="form-group">
-          <label htmlFor="last-name">Last Name:</label>
-          
+          <label htmlFor="last-name">Last Name</label>
+          <br></br>
           <input type="text" id="last-name" name="last-name" placeholder="Doe" className='settings-placeholder' />
         </div> 
          
@@ -28,14 +28,14 @@ const ProfileSettings = () => {
 
         <div >
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
-         
+          <label htmlFor="email">Email</label>
+          <br></br>
           <input type="email" id="email" name="email" placeholder="john.doe@example.com" className='settings-placeholder' />
         </div>
        
         <div className="form-group">
-          <label htmlFor="phone">Phone:</label>
-          
+          <label htmlFor="phone">Phone</label>
+          <br></br>
           <input type="tel" id="phone" name="phone" placeholder="123-456-7890" className='settings-placeholder' />
         </div>
         </div>
