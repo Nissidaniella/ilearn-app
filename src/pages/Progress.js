@@ -5,6 +5,7 @@ import image from "../images/logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGrip, faSwatchbook, faClipboardList, faBarsProgress, faMessage, faBell, faGear } from '@fortawesome/free-solid-svg-icons'
 import TimeSpent from "./TimeSpent";
+import Navbar from "../components/Navbar";
 export default function Progress() {
   return (
     <div className='progress'>  
@@ -48,9 +49,15 @@ export default function Progress() {
 
 </div>
 
+<div className="progress-content">
+<Navbar/>
+
+<div> 
+  <TimeSpent/>
+</div>
+</div>
 
 
-<TimeSpent/>
 
     </div>
   );

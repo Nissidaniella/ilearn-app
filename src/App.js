@@ -29,7 +29,7 @@ export function App() {
     const timer = setTimeout(() => {
       setLoading(false);
       navigate("/signup"); // Navigate to /signup
-    }, 3000);
+    }, 6000);
 
     // Cleanup the timer on component unmount
     return () => clearTimeout(timer);
