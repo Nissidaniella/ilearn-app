@@ -16,7 +16,7 @@ import Buttons from "../components/Buttons";
 import Navbar from "../components/Navbar";
 import ProfileFront from "../components/ProfileFront";
 import ProfileBack from "../components/ProfileBack";
-// import Activity from "../components/Activity";
+
 
 export default function Dashboard() {
   return (
@@ -85,6 +85,7 @@ export default function Dashboard() {
 
       <div className="dashboard-content">
         <Navbar />
+       
 
         <div className="dashboard-container flex flex-row md:flex-row">
           <div className="courses-link">

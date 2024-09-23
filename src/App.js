@@ -19,6 +19,8 @@ import Settings from "./pages/Settings";
 import TimeSpent from "./components/TimeSpent";
 import ChatBox from "./pages/Chatbox";
 import ContextProvider from "./Context/Context";
+import Reward from "./pages/Reward";
+
 
 export function App() {
   const [loading, setLoading] = useState(true);
@@ -168,6 +170,18 @@ export default function AppWrapper() {
               <ContextProvider>
                 <ChatBox />
               </ContextProvider>
+            </>
+          }
+        />
+
+<Route
+          path="/reward"
+          element={
+            <>
+              <Helmet>
+                <title>Reward</title>
+              </Helmet>
+              <Reward />
             </>
           }
         />

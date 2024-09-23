@@ -83,7 +83,7 @@ export default function Classes() {
         </div>
       </div>
 
-      <h1>gffxtrfxxxxxxrrrrrrrrrrrrrrrrr</h1>
+    
 
      
     </div>

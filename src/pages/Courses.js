@@ -4,16 +4,13 @@ import { Link } from "react-router-dom";
 import image from "../images/logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGrip, faSwatchbook, faClipboardList, faBarsProgress, faMessage, faBell, faGear } from '@fortawesome/free-solid-svg-icons'
+
+
+
 export default function Courses() {
   return (
     <div className='courses'>  
 <div class="menu-card playing">
-  
-  
- 
-  
-  
-
       <div class="menu-content">
 
    
@@ -53,6 +50,7 @@ export default function Courses() {
 
   </div>
 </div>
+
 
 
 

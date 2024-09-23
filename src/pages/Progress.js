@@ -16,6 +16,7 @@ import DaySpent from "../components/DaySpent";
 import Navbar from "../components/Navbar";
 import image from "../images/logo.png";
 import "../index.css";
+import Reward from "../pages/Reward";
 
 export default function Progress() {
   const [activeTab, setActiveTab] = useState("timeSpent");
@@ -103,7 +104,7 @@ export default function Progress() {
       </div>
       <div className="progress-content">
         <Navbar />
-
+       
         <div className="progress-container">
           <div className="progress1">
             <h1>Progress</h1>
@@ -113,51 +114,58 @@ export default function Progress() {
                   className={activeTab === "timeSpent" ? "active" : ""}
                   onClick={() => handleTabChange("timeSpent")}
                 >
-                  
                   Time⏳
-                   <span className="li-txt"> the number of minutes spent on the app </span>
+                  <span className="li-txt">
+                    {" "}
+                    the number of minutes spent on the app{" "}
+                  </span>
                 </li>
 
-                
                 <li
                   className={activeTab === "weekSpent" ? "active" : ""}
                   onClick={() => handleTabChange("weekSpent")}
                 >
-                  Weeks🌗 <span className="li-txt">  number of weeks spent on the app</span>
+                  Weeks🌗{" "}
+                  <span className="li-txt">
+                    {" "}
+                    number of weeks spent on the app
+                  </span>
                 </li>
                 <li
                   className={activeTab === "daySpent" ? "active" : ""}
                   onClick={() => handleTabChange("daySpent")}
                 >
-                  Days🌤️ 
-                  <span className="li-txt"> number of days spent on the app</span>
+                  Days🌤️
+                  <span className="li-txt">
+                    {" "}
+                    number of days spent on the app
+                  </span>
                 </li>
               </ul>
             </div>
 
             <h2>Streak Challenge</h2>
-            <div className="flex">    
+            <div className="flex">
               <span className="big">🎉</span>
-            
-            <h3>You unlocked your 1 day streak goal! Check<br></br> out your 
-            <span className="text-red-600 hover:text-blue-400"> reward</span> </h3> </div>
-          
-            
-            <h2> Complete a 1 week streak goal to unlock more rewards</h2>
 
-           
+              <h3>
+                You unlocked your 1-day streak goal! Check out your{" "}
+                <Link to="/reward" className="text-red-600 hover:text-blue-400">
+                  reward
+                </Link>
+              </h3>
+            </div>
 
-           
-<form class="my-form">
-  <div>
-    <input id="check-1" type="checkbox" />
-    <label for="check-1">Get notified when you complete a streak</label>
-  </div>
+            <h2> Complete a 1-week streak goal to unlock more rewards</h2>
 
-   
-</form>
-
-          
+            <form class="my-form">
+              <div>
+                <input id="check-1" type="checkbox" />
+                <label for="check-1">
+                  Get notified when you complete a streak
+                </label>
+              </div>
+            </form>
           </div>
 
           <div>
