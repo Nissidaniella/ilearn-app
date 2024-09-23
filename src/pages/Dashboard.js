@@ -32,7 +32,7 @@ export default function Dashboard() {
                 <FontAwesomeIcon
                   icon={faGrip}
                   size="xl"
-                  style={{ marginRight: "3px" }}
+                  style={{ marginRight: "3px" , color: "red" }}
                 />{" "}
                 Dashboard
               </li>

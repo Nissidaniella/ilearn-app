@@ -99,7 +99,7 @@ const ChatBox = () => {
     <div className="chatbox-container flex">
       {/* Sidebar for Recent Conversations */}
       <button
-        className="sidebar-toggle-button bg-red-800 "
+        className="sidebar-toggle-button bg-red-600 "
         onClick={handleToggleSidebar}
       >
         ☰ {/* Hamburger icon */}
@@ -128,7 +128,7 @@ const ChatBox = () => {
                     </p>
 
                   <button
-                    className="del  hover:text-red-400 focus:outline-none"
+                    className="del  hover:text-black focus:outline-none"
                     onClick={(e) => {
                       e.stopPropagation();
                       handleDelete(index);

@@ -54,7 +54,7 @@ const DeleteAccount = () => {
   return (
     <>
       <h2 className="PS">Delete Account</h2>
-      <div className="max-w-md mx-auto p-4 delete">
+      <div className="max-w-md ml-12 p-4 delete">
         <p className="text-3xl  text-red-400 mt-5">
           Are you sure you want to delete your account? This action is permanent and cannot be undone.
         </p>

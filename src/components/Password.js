@@ -47,7 +47,7 @@ const Password = () => {
       
     </div>
       <h2 className="PS">Change Password</h2>
-      <div className="max-w-md mx-auto p-4 password">
+      <div className="max-w-md ml-12 p-4 password">
         <form onSubmit={handleSubmit}>
           {/* Current Password */}
           <label className="block mb-2">

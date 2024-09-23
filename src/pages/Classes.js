@@ -45,7 +45,7 @@ export default function Classes() {
                 <FontAwesomeIcon
                   icon={faClipboardList}
                   size="xl"
-                  style={{ marginRight: "8px" }}
+                  style={{ marginRight: "8px", color: "red" }}
                 />
                 My Classes
               </li>

@@ -85,7 +85,7 @@ export default function Settings() {
                 <FontAwesomeIcon
                   icon={faGear}
                   size="xl"
-                  style={{ marginRight: "8px" }}
+                  style={{ marginRight: "8px", color: "red" }}
                 />
                 Settings
               </li>

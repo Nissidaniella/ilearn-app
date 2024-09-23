@@ -65,7 +65,7 @@ export default function ()  {
             <Link to="/messages" className="menu-link">Messages</Link></li>
 
             <li className="active">
-            <FontAwesomeIcon icon={faBell} size="xl" style={{ marginRight: '8px' }}/>
+            <FontAwesomeIcon icon={faBell} size="xl" style={{ marginRight: '8px', color: "red" }}/>
             Notifications</li>
 
             <li>

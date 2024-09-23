@@ -16,8 +16,8 @@ import Progress from "./pages/Progress";
 import Messages from "./pages/Messages";
 import Notifications from "./pages/Notifications";
 import Settings from "./pages/Settings";
-import TimeSpent from "./pages/TimeSpent";
-import ChatBox from "./pages/Chatbox"
+import TimeSpent from "./components/TimeSpent";
+import ChatBox from "./pages/Chatbox";
 import ContextProvider from "./Context/Context";
 
 export function App() {
@@ -158,7 +158,7 @@ export default function AppWrapper() {
             </>
           }
         />
-          <Route
+        <Route
           path="/chatBox"
           element={
             <>
@@ -166,9 +166,8 @@ export default function AppWrapper() {
                 <title>ChatBox</title>
               </Helmet>
               <ContextProvider>
-              <ChatBox />
+                <ChatBox />
               </ContextProvider>
-             
             </>
           }
         />

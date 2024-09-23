@@ -57,7 +57,7 @@ export default function Messages() {
 
               <li className="active">
                 {" "}
-                <FontAwesomeIcon icon={faMessage} size="xl" style={{ marginRight: '4px' }} />
+                <FontAwesomeIcon icon={faMessage} size="xl" style={{ marginRight: '4px', color: "red" }} />
                 
                   Chat box
                

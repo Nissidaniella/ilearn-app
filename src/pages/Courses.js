@@ -27,7 +27,7 @@ export default function Courses() {
           <Link to="/dashboard" className="menu-link">Dashboard</Link></li>
 
             <li className="active">
-            <FontAwesomeIcon icon={faSwatchbook} size="xl" style={{ marginRight: '4px' }} />
+            <FontAwesomeIcon icon={faSwatchbook} size="xl" style={{ marginRight: '4px', color: "red" }} />
              My Courses</li>
 
             <li>
