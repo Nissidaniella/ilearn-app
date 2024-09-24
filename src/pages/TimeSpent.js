@@ -44,7 +44,7 @@ const TimeSpent = () => {
 
   return (
     
-    <div>
+    <div className='chart'>
           <p>You have spent {timeSpend} minutes on the app.</p>
           <Bar key={chartData.labels.length} data={chartData} />
          </div>
@@ -52,5 +52,3 @@ const TimeSpent = () => {
 };
 
 export default TimeSpent;
-
-

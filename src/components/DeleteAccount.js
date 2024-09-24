@@ -54,8 +54,8 @@ const DeleteAccount = () => {
   return (
     <>
       <h2 className="PS">Delete Account</h2>
-      <div className="max-w-md mx-auto p-4 rounded-lg shadow-md">
-        <p className="text-2xl font-bold text-red-600">
+      <div className="max-w-md mx-auto p-4 delete">
+        <p className="text-3xl  text-red-400 mt-5">
           Are you sure you want to delete your account? This action is permanent and cannot be undone.
         </p>
         <form onSubmit={handleSubmit} className="flex flex-col mt-5">
@@ -66,7 +66,7 @@ const DeleteAccount = () => {
                 type={showCurrentPassword ? 'text' : 'password'}
                 value={password}
                 onChange={handlePasswordChange}
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
               />
               <FontAwesomeIcon
                 icon={showCurrentPassword ? faEyeSlash : faEye}

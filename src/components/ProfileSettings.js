@@ -9,8 +9,8 @@ const ProfileSettings = () => {
       <form className="profileS-container">
         <div>
         <div className="form-group  ">
-          <label htmlFor="first-name">First Name:</label>
-         
+          <label htmlFor="first-name">First Name</label>
+         <br></br>
           <input type="text" id="first-name" name="first-name" placeholder="John" className='settings-placeholder' />
         </div>
         
@@ -18,8 +18,8 @@ const ProfileSettings = () => {
 
 
         <div className="form-group">
-          <label htmlFor="last-name">Last Name:</label>
-          
+          <label htmlFor="last-name">Last Name</label>
+          <br></br>
           <input type="text" id="last-name" name="last-name" placeholder="Doe" className='settings-placeholder' />
         </div> 
          
@@ -28,14 +28,14 @@ const ProfileSettings = () => {
 
         <div >
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
-         
+          <label htmlFor="email">Email</label>
+          <br></br>
           <input type="email" id="email" name="email" placeholder="john.doe@example.com" className='settings-placeholder' />
         </div>
        
         <div className="form-group">
-          <label htmlFor="phone">Phone:</label>
-          
+          <label htmlFor="phone">Phone</label>
+          <br></br>
           <input type="tel" id="phone" name="phone" placeholder="123-456-7890" className='settings-placeholder' />
         </div>
         </div>
@@ -61,7 +61,7 @@ const ProfileSettings = () => {
  
 
 <button type="submit"
-  class=" mb-2 px-6 z-30 py-2 bg-blue-500 rounded-md text-white relative font-semibold after:-z-20 after:absolute after:h-1 after:w-1 after:bg-blue-800 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 [text-shadow:3px_5px_2px_#0a66c2] hover:[text-shadow:2px_2px_2px_#fda4af] "
+  className=" mb-2 px-6 z-30 py-2 bg-blue-500 rounded-md text-white relative font-semibold after:-z-20 after:absolute after:h-1 after:w-1 after:bg-blue-800 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 [text-shadow:3px_5px_2px_#0a66c2] hover:[text-shadow:2px_2px_2px_#fda4af] "
 >
   Save changes
 </button>
