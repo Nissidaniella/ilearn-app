@@ -53,9 +53,9 @@ export default function ()  {
             <Link to="/courses" className="menu-link">My Courses</Link>
              </li>
 
-            <li>
+            {/* <li>
             <FontAwesomeIcon icon={faClipboardList} className='icon' /> <Link to="/classes" className="menu-link">My Classes</Link>
-              </li>
+              </li> */}
 
             <li>
             <FontAwesomeIcon icon={faBarsProgress} className='icon' />
