@@ -46,6 +46,10 @@ const Password = () => {
     <div className="password-container">
       
     </div>
+
+    <div className="password-container">
+      
+    </div>
       <h2 className="PS">Change Password</h2>
       <div className="max-w-md ml-12 p-4 password">
         <form onSubmit={handleSubmit}>
@@ -57,6 +61,7 @@ const Password = () => {
                 type={showCurrentPassword ? 'text' : 'password'}
                 value={currentPassword}
                 onChange={handleCurrentPasswordChange}
+                className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
                 className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
               />
               <FontAwesomeIcon
@@ -76,6 +81,7 @@ const Password = () => {
                 value={newPassword}
                 onChange={handleNewPasswordChange}
                 className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
+                className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
               />
               <FontAwesomeIcon
                 icon={showNewPassword ? faEyeSlash : faEye}
@@ -87,12 +93,14 @@ const Password = () => {
 
           {/* Confirm New Password */}
           <label className="block mb-4 ">
+          <label className="block mb-4 ">
             Confirm New Password:
             <div className="relative">
               <input
                 type={showConfirmNewPassword ? 'text' : 'password'}
                 value={confirmNewPassword}
                 onChange={handleConfirmNewPasswordChange}
+                className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
                 className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
               />
               <FontAwesomeIcon

@@ -19,8 +19,16 @@ import ProfileBack from "../components/ProfileBack";
 
 
 export default function Dashboard() {
+
+//AIzaSyA0yiVthnCjgym7AgahdQny-7n6W7C8VYY  - youtube api key
+
+
+
+
+
   return (
     <div className="dashboard">
+      <div class="menu-card  custom:block">
       <div class="menu-card  custom:block">
         <div class="menu-content">
           <div className="logo">
@@ -28,6 +36,7 @@ export default function Dashboard() {
           </div>
           <div className="menu">
             <ul>
+              
               <li className="active ">
                 <FontAwesomeIcon
                   icon={faGrip}
@@ -62,6 +71,7 @@ export default function Dashboard() {
                 <FontAwesomeIcon icon={faMessage} className="icon" />
                 <Link to="/messages" className="menu-link">
                   Chat box
+                  Chat box
                 </Link>
               </li>
 
@@ -95,18 +105,27 @@ export default function Dashboard() {
               <Link to="/courses" className="button-link">
                 <Buttons />
               </Link>
+             
             </div>
 
             <div class="cards">
               <div class="card red">
                 <p class="text">Lorem Ipsum</p>
+                <p class="text">Lorem Ipsum</p>
               </div>
               <div class="card blue">
+                <p class="text">Lorem Ipsum</p>
                 <p class="text">Lorem Ipsum</p>
               </div>
               <div class="card green">
                 <p class="text">Lorem Ipsum</p>
+                <p class="text">Lorem Ipsum</p>
               </div>
+            </div>
+
+            <div className="time-video flex">
+              <div className="time bg-white"> timeee</div>
+              <div className="video bg-white">vod</div>
             </div>
 
             <div className="time-video flex">
@@ -132,8 +151,36 @@ export default function Dashboard() {
               </a>
               
             </div>
+            <div className="assignments">
+            <div className="courses-link-heading">
+              {" "}
+              <h1>Available Classes</h1>
+              <Link to="/classes" className="button-link">
+                <Buttons />
+              </Link>
+            </div>
+              
+              <a class="btn" href="#">
+                I am a button
+              </a>
+
+              <a class="btn" href="#">
+                I am a button
+              </a>
+              
+            </div>
           </div>
 
+          <div className="profile-card">
+            <div className="profile-card-inner">
+              <div className="profile-card-front">
+                <ProfileFront />
+              </div>
+              <div className="profile-card-back">
+                <ProfileBack />
+              </div>
+            </div>
+          </div>
           <div className="profile-card">
             <div className="profile-card-inner">
               <div className="profile-card-front">

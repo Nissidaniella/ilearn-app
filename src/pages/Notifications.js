@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import React, { useState } from "react";
 import "../index.css";
 import { Link } from "react-router-dom";
 import image from "../images/logo.png";
@@ -6,7 +7,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGrip, faSwatchbook, faClipboardList, faBarsProgress, faMessage, faBell, faGear } from '@fortawesome/free-solid-svg-icons'
 import Navbar from "../components/Navbar";
 import notifications from '../images/notifications.png';
+import Navbar from "../components/Navbar";
+import notifications from '../images/notifications.png';
 
+export default function ()  {
+  const [emailNotifications, setEmailNotifications] = useState(false);
+  const [pushNotifications, setPushNotifications] = useState(false);
+  const [inAppNotifications, setInAppNotifications] = useState(false);
+
+  const handleEmailNotificationsChange = (event) => {
+    setEmailNotifications(event.target.checked);
+  };
+
+  const handlePushNotificationsChange = (event) => {
+    setPushNotifications(event.target.checked);
+  };
+
+  const handleInAppNotificationsChange = (event) => {
+    setInAppNotifications(event.target.checked);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
 export default function ()  {
   const [emailNotifications, setEmailNotifications] = useState(false);
   const [pushNotifications, setPushNotifications] = useState(false);
@@ -38,6 +61,7 @@ export default function ()  {
 
       <div class="menu-content">
 
+   
    
    
 
@@ -157,5 +181,3 @@ export default function ()  {
 </>
   );
 }
-
-

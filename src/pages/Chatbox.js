@@ -10,8 +10,29 @@ import {
   faBell,
   faGear,
 } from "@fortawesome/free-solid-svg-icons";
+import React, { useContext, useState, useEffect } from "react";
+import ContextProvider, { Context } from "../Context/Context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGrip,
+  faSwatchbook,
+  faClipboardList,
+  faBarsProgress,
+  faMessage,
+  faBell,
+  faGear,
+} from "@fortawesome/free-solid-svg-icons";
 
 const ChatBox = () => {
+  const {
+    onSent,
+    recentPrompt,
+    showResult,
+    loading,
+    resultData,
+    setInput,
+    input,
+  } = useContext(Context);
   const {
     onSent,
     recentPrompt,
@@ -25,19 +46,23 @@ const ChatBox = () => {
   const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
+
     const toggleSidebar = () => {
       setIsOpen(!isOpen);
     };
+  };
   };
   // State to store only the latest conversation
   const [history, setHistory] = useState([]);
   const [selectedConversation, setSelectedConversation] = useState(null);
   const [loadingState, setLoadingState] = useState(false); // New loading state for AI response
   const [userMessage, setUserMessage] = useState(""); // State to track user's input immediately
+  const [userMessage, setUserMessage] = useState(""); // State to track user's input immediately
 
   // Effect to update conversation with the latest message and response
   useEffect(() => {
     // Load the recent conversation from localStorage
+    const savedHistory = JSON.parse(localStorage.getItem("chatHistory")) || [];
     const savedHistory = JSON.parse(localStorage.getItem("chatHistory")) || [];
     if (savedHistory.length > 0) {
       setHistory(savedHistory);
@@ -53,7 +78,9 @@ const ChatBox = () => {
       setSelectedConversation(newConversation); // Set the latest conversation for display
       setLoadingState(false); // Set loading state to false when response is received
 
+
       // Save the updated history to localStorage
+      localStorage.setItem("chatHistory", JSON.stringify(updatedHistory));
       localStorage.setItem("chatHistory", JSON.stringify(updatedHistory));
     }
   }, [recentPrompt, resultData]);
@@ -61,9 +88,11 @@ const ChatBox = () => {
   // Function to handle sending messages
   const handleSend = () => {
     if (input.trim() === "") return; // Prevent sending empty messages
+    if (input.trim() === "") return; // Prevent sending empty messages
     setUserMessage(input); // Store user message to display immediately
     setLoadingState(true); // Show loading state while waiting for AI response
     onSent(); // Trigger the context function to handle AI response
+    setInput(""); // Clear the input field after sending
     setInput(""); // Clear the input field after sending
   };
 
@@ -72,7 +101,11 @@ const ChatBox = () => {
     const updatedHistory = history.filter(
       (_, index) => index !== indexToDelete
     );
+    const updatedHistory = history.filter(
+      (_, index) => index !== indexToDelete
+    );
     setHistory(updatedHistory);
+    localStorage.setItem("chatHistory", JSON.stringify(updatedHistory));
     localStorage.setItem("chatHistory", JSON.stringify(updatedHistory));
   };
 
@@ -85,8 +118,15 @@ const ChatBox = () => {
   const truncateResponse = (response, maxLength = 100) => {
     if (response.length > maxLength) {
       return response.substring(0, maxLength) + "...";
+      return response.substring(0, maxLength) + "...";
     }
     return response;
+  };
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const handleToggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -147,7 +187,10 @@ const ChatBox = () => {
 
       {/* Main Chat Area */}
       <div class="flex-1 flex flex-col justify-between bg-[#DADBF3] shadow-lg p-4 main-chat" >
+      <div class="flex-1 flex flex-col justify-between bg-[#DADBF3] shadow-lg p-4 main-chat" >
         {/* Header */}
+        <div className="border-b-2 pb-3 mb-3">
+          <h1 className="text-4xl font-bold text-black">ChatBox</h1>
         <div className="border-b-2 pb-3 mb-3">
           <h1 className="text-4xl font-bold text-black">ChatBox</h1>
         </div>
@@ -159,10 +202,17 @@ const ChatBox = () => {
             <div className="bg-[#F61B01] rounded-lg p-3 text-white">
               {userMessage}
             </div>
+            <div className="bg-[#F61B01] rounded-lg p-3 text-white">
+              {userMessage}
+            </div>
           )}
+
 
           {/* Show AI response or loading indicator */}
           {loadingState ? (
+            <div className="bg-[#020BAA] rounded-lg p-3 text-white">
+              Loading AI response...
+            </div>
             <div className="bg-[#020BAA] rounded-lg p-3 text-white">
               Loading AI response...
             </div>
@@ -178,12 +228,16 @@ const ChatBox = () => {
         {/* Input Section */}
         <div className="border-t pt-3 sticky bottom-0 ">
           <div className="flex justify-between gap-3">
+        <div className="border-t pt-3 sticky bottom-0 ">
+          <div className="flex justify-between gap-3">
             <input
               type="text"
+              className="flex-1 border border-black rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent"
               className="flex-1 border border-black rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent"
               placeholder="Type a message..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSend()}
               onKeyDown={(e) => e.key === "Enter" && handleSend()}
             />
             <button

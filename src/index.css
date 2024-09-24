@@ -491,6 +491,7 @@ body{
   align-items: center;
   flex-direction: column;
 
+
 }
 
 .menu-content .logo{
@@ -510,6 +511,7 @@ body{
   gap:15px ;
   color: white;
 
+
 }
 
 .menu-content .menu li{
@@ -520,9 +522,13 @@ body{
   margin-right: 8px;
   font-size: 20px; 
 
+
 }
 
 .menu .active {
+  position: relative;
+
+
   position: relative;
 
 
@@ -545,6 +551,7 @@ body{
   height: 1px;
   bottom: 0;
   left: 0;
+  background-color: rgb(254, 1, 1); 
   background-color: rgb(254, 1, 1); 
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
@@ -689,7 +696,9 @@ body{
   position: absolute;
   background-color: #f9f9f9;
   min-width: 100px;
+  min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ margin-left: -30px;
  margin-left: -30px;
   z-index: 1;
 }
@@ -718,8 +727,15 @@ body{
 .dashboard-content{
   width: 75%;
   margin: 20px;}
+  margin: 20px;}
 
 
+
+.dashboard-container {
+  background-color: rgb(218, 219, 243);
+  border-radius: 16px;
+  margin:20px 0;
+  height: 550px;
 
 .dashboard-container {
   background-color: rgb(218, 219, 243);
@@ -729,16 +745,20 @@ body{
 }
 
 .dashboard-container .courses-link{
+.dashboard-container .courses-link{
   width: 60%;
+  padding: 20px;
   padding: 20px;
 }
 
+.dashboard-container .courses-link-heading
 .dashboard-container .courses-link-heading
 {
 display: flex;
 justify-content: space-between;
 }
 
+.dashboard-container .courses-link-heading h1
 .dashboard-container .courses-link-heading h1
 {
 font-weight: 500;
@@ -763,6 +783,7 @@ font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
   border: 4px solid rgb(246, 27, 1);
+  border: 4px solid rgb(246, 27, 1);
   border-radius: 0;
   position: relative;
   transition: all 700ms ease;
@@ -781,6 +802,7 @@ font-weight: 500;
 }
 
 .c-button--gooey .c-button__blobs div {
+  background-color: rgb(246, 27, 1);
   background-color: rgb(246, 27, 1);
   width: 34%;
   height: 100%;
@@ -820,17 +842,21 @@ font-weight: 500;
   justify-content: center;
   margin-top: 10px;
   
+  
 }
 
 .cards .red {
+  background-color: #ffffff;
   background-color: #ffffff;
 }
 
 .cards .blue {
   background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .cards .green {
+  background-color: #ffffff;
   background-color: #ffffff;
 }
 
@@ -857,6 +883,107 @@ font-weight: 500;
   font-size: 0.7em;
 }
 
+
+.time-video{
+  margin: 20px 0;
+  height: 175px;
+  gap: 15px;
+}
+
+.time-video .time {
+  width: 50%;
+  border-radius: 16px;
+}
+
+.time-video .video {
+  width: 50%;
+  border-radius: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.assignments{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 150px;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  border: 1px solid rgb(2, 11, 170);
+  border-radius: 16px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+  
+ }
+ 
+ .btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F61B01;
+  transform: translateX(-100%);
+  transition: all .3s;
+  z-index: -1;
+ }
+ 
+ .btn:hover::before {
+  transform: translateX(0);
+ }
+
+
+/* start of profile css */
+
+.profile-card {
+  height: 97%;
+  width: 97%;
+  perspective: 1000px;
+  margin: 10px;
 
 .time-video{
   margin: 20px 0;
@@ -1002,8 +1129,32 @@ font-weight: 500;
   transform: rotateY(180deg);
   padding: 10px;
   color: white;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+  padding: 10px;
+  color: white;
 }
 
+.profile-front{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-front h1{
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin-top: 30px;
+}
+
+ .profile-front img{
+  background-color: #000000;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin-top: 10px;
 .profile-front{
   display: flex;
   flex-direction: column;
@@ -1060,7 +1211,45 @@ font-weight: 500;
   border-bottom: 1px solid white;
   padding: 10px 0;
   outline: none;
+.profile-front h2{
+  margin-top: 20px;
+  font-size: 20px;
+  border-bottom: 2px solid #F61B01 ;
+  
 }
+
+.edu img{
+  width: 250px;
+  background-color: transparent;
+  margin-top: -40px;
+}
+
+.profile-back{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.profile-back h1{
+  font-size: 2.9rem;
+  font-weight: 100;
+}
+.profile-back p{
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.profile-back input{
+  color: #ffffff;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  padding: 10px 0;
+  outline: none;
+}
+
+/* end of profile css */
 
 /* end of profile css */
 
@@ -1192,6 +1381,8 @@ width: 960px;
   height: 100%;
   background-color:rgb(218, 219, 243);
   color: #000000;
+  background-color:rgb(218, 219, 243);
+  color: #000000;
   padding: 20px;
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
@@ -1213,6 +1404,7 @@ width: 960px;
 
 .settings-menu button.active {
   background-color:#F61B01;
+  background-color:#F61B01;
   color: #fff;
   position: relative;
 }
@@ -1226,6 +1418,7 @@ width: 960px;
   background-color:rgb(6, 8, 45);
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
+  color: #ffffff;
   color: #ffffff;
  
 }
@@ -1241,6 +1434,9 @@ width: 960px;
   max-width: 650px;
   margin: auto;
 }
+
+
+
 
 
 
@@ -1264,13 +1460,31 @@ width: 960px;
 
 .delete p{
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+  text-shadow: 2px 2px 5px rgb(1, 1, 1);
+}
+
+.password label {
+  text-shadow: 2px 2px 5px rgb(1, 1, 1);
+  font-weight: bold;
+}
+
+.delete label {
+  text-shadow: 2px 2px 5px rgb(1, 1, 1);
+  font-weight: bold;
+}
+
+.delete p{
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
 }
 
 /* Style input fields */
 .profileS-container input {
   width: 70%;
+  width: 70%;
   padding: 10px;
   margin-bottom: 16px;
+  border-bottom: 1px solid #ffffff;
+  background-color: transparent;
   border-bottom: 1px solid #ffffff;
   background-color: transparent;
   
@@ -1369,12 +1583,15 @@ width: 960px;
 .authentication-container {
   width: 70%;
   margin: 0 0 0 90px;
+  width: 70%;
+  margin: 0 0 0 90px;
 }
 
 
 .authentication-container form {
   display: flex;
   flex-direction: column;
+ 
  
 }
 
@@ -1383,14 +1600,35 @@ width: 960px;
   margin-bottom: 8px;
   margin-top: 15px;
   text-shadow: 2px 2px 5px rgb(1, 1, 1);
+  margin-top: 15px;
+  text-shadow: 2px 2px 5px rgb(1, 1, 1);
 }
 
 .authentication-container input {
   padding: 10px;
   border-bottom: 1px solid #ccc;
   background-color: transparent;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
 }
 /* end of security settings css */
+
+/* start of notification page css */
+.notifications{
+  display: flex;
+}
+
+
+.notifications-content{
+ margin: 20px 20px 0 20px;
+  height: auto; 
+  border-radius: 16px;
+width: 960px;
+  display: flex;
+  flex-direction: column;
+ 
+  
+}
 
 /* start of notification page css */
 .notifications{
@@ -1460,6 +1698,16 @@ width: 960px;
 .form-group{
   justify-content: center;
 
+ border-bottom: 1px solid white;
+  width: 500px;
+  height: 80px;
+  padding: 13px ;
+  text-shadow: 2px 2px 5px rgb(1, 1, 1);
+}
+
+.form-group{
+  justify-content: center;
+
 }
 
 .notification-container label p{
@@ -1467,6 +1715,14 @@ width: 960px;
   font-size: 13px;
 }
 .my-form {
+  
+  width: 69%;
+
+
+
+  --_clr-primary: #ffffff;
+  --_clr-hover: #fa1919;
+  --_clr-checked: #cf1212;
   
   width: 69%;
 
@@ -1506,6 +1762,7 @@ width: 960px;
   display: grid;
   place-content: center;
   cursor: pointer;
+  
   
 }
 .my-form input[type="checkbox"]::after {

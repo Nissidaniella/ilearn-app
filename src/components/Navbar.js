@@ -1,15 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
 import "../index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars} from "@fortawesome/free-solid-svg-icons";
+import { getAuth } from "firebase/auth";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [user, setUser] = useState();
+
+
+
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+  useEffect(() => {
+    const auth = getAuth();
+    const loggedInUser = auth.currentUser;
+
+    if (loggedInUser) {
+      setUser({
+        name: loggedInUser.displayName,
+ 
+      });
+    }
+  }, []);
 
   return (
     <>
@@ -22,7 +38,7 @@ const Navbar = () => {
           </div>
 
           <div className="dropdown">
-          
+          Hi {user && user.name}!
             <button className="dropbtn" onClick={toggleDropdown}>
             <FontAwesomeIcon icon={faBars} /> 
             </button>
