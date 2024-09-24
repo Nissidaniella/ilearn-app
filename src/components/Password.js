@@ -62,7 +62,7 @@ const Password = () => {
                 value={currentPassword}
                 onChange={handleCurrentPasswordChange}
                 className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
-                className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
+                
               />
               <FontAwesomeIcon
                 icon={showCurrentPassword ? faEyeSlash : faEye}
@@ -81,7 +81,7 @@ const Password = () => {
                 value={newPassword}
                 onChange={handleNewPasswordChange}
                 className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
-                className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
+                
               />
               <FontAwesomeIcon
                 icon={showNewPassword ? faEyeSlash : faEye}
@@ -92,7 +92,7 @@ const Password = () => {
           </label>
 
           {/* Confirm New Password */}
-          <label className="block mb-4 ">
+          
           <label className="block mb-4 ">
             Confirm New Password:
             <div className="relative">
@@ -101,7 +101,7 @@ const Password = () => {
                 value={confirmNewPassword}
                 onChange={handleConfirmNewPasswordChange}
                 className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
-                className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
+              
               />
               <FontAwesomeIcon
                 icon={showConfirmNewPassword ? faEyeSlash : faEye}

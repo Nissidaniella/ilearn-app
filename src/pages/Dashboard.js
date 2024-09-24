@@ -16,7 +16,7 @@ import Buttons from "../components/Buttons";
 import Navbar from "../components/Navbar";
 import ProfileFront from "../components/ProfileFront";
 import ProfileBack from "../components/ProfileBack";
-
+// import Activity from "../components/Activity";
 
 export default function Dashboard() {
 
@@ -29,14 +29,12 @@ export default function Dashboard() {
   return (
     <div className="dashboard">
       <div class="menu-card  custom:block">
-      <div class="menu-card  custom:block">
         <div class="menu-content">
           <div className="logo">
             <img src={image} alt="Logo-image" />
           </div>
           <div className="menu">
             <ul>
-              
               <li className="active ">
                 <FontAwesomeIcon
                   icon={faGrip}
@@ -71,7 +69,6 @@ export default function Dashboard() {
                 <FontAwesomeIcon icon={faMessage} className="icon" />
                 <Link to="/messages" className="menu-link">
                   Chat box
-                  Chat box
                 </Link>
               </li>
 
@@ -95,7 +92,6 @@ export default function Dashboard() {
 
       <div className="dashboard-content">
         <Navbar />
-       
 
         <div className="dashboard-container flex flex-row md:flex-row">
           <div className="courses-link">
@@ -105,27 +101,18 @@ export default function Dashboard() {
               <Link to="/courses" className="button-link">
                 <Buttons />
               </Link>
-             
             </div>
 
             <div class="cards">
               <div class="card red">
                 <p class="text">Lorem Ipsum</p>
-                <p class="text">Lorem Ipsum</p>
               </div>
               <div class="card blue">
-                <p class="text">Lorem Ipsum</p>
                 <p class="text">Lorem Ipsum</p>
               </div>
               <div class="card green">
                 <p class="text">Lorem Ipsum</p>
-                <p class="text">Lorem Ipsum</p>
               </div>
-            </div>
-
-            <div className="time-video flex">
-              <div className="time bg-white"> timeee</div>
-              <div className="video bg-white">vod</div>
             </div>
 
             <div className="time-video flex">
@@ -151,36 +138,8 @@ export default function Dashboard() {
               </a>
               
             </div>
-            <div className="assignments">
-            <div className="courses-link-heading">
-              {" "}
-              <h1>Available Classes</h1>
-              <Link to="/classes" className="button-link">
-                <Buttons />
-              </Link>
-            </div>
-              
-              <a class="btn" href="#">
-                I am a button
-              </a>
-
-              <a class="btn" href="#">
-                I am a button
-              </a>
-              
-            </div>
           </div>
 
-          <div className="profile-card">
-            <div className="profile-card-inner">
-              <div className="profile-card-front">
-                <ProfileFront />
-              </div>
-              <div className="profile-card-back">
-                <ProfileBack />
-              </div>
-            </div>
-          </div>
           <div className="profile-card">
             <div className="profile-card-inner">
               <div className="profile-card-front">

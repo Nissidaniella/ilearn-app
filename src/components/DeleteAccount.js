@@ -67,7 +67,6 @@ const DeleteAccount = () => {
                 value={password}
                 onChange={handlePasswordChange}
                 className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
-                className="w-full px-3 py-2 border-b border-white bg-transparent mb-6"
               />
               <FontAwesomeIcon
                 icon={showCurrentPassword ? faEyeSlash : faEye}

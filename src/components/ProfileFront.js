@@ -34,7 +34,7 @@ const ProfileFront = ({ profileImage = "", socialMediaLinks = [] }) => {
           {/* User Name and Email */}
           <div className="user-name">
             <h2>{user.name}</h2>
-            <p>{user.email}</p>
+            {/* <p>{user.email}</p> */}
           </div>
         </div>
       ) : (
