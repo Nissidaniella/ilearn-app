@@ -5,7 +5,7 @@ import image from "../images/logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGrip, faSwatchbook, faClipboardList, faBarsProgress, faMessage, faBell, faGear } from '@fortawesome/free-solid-svg-icons'
 import Navbar from "../components/Navbar";
-import notifications from '../images/notifications.png';
+import notification from '../images/notification.png';
 
 export default function ()  {
   const [emailNotifications, setEmailNotifications] = useState(false);
@@ -85,7 +85,7 @@ export default function ()  {
       
       <div className="N-container">  <h2>Notifi</h2>   
 
-      <img src={notifications} alt="Settings" className="mt-14"  />
+      <img src={notification} alt="Settings" className="mt-14"  />
       
        </div>
       
