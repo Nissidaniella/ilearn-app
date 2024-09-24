@@ -19,7 +19,7 @@ import "../index.css";
 import Reward from "../pages/Reward";
 
 export default function Progress() {
-  const [activeTab, setActiveTab] = useState("timeSpent");
+  const [activeTab, setActiveTab] = useState("weekSpent");
 
   const handleTabChange = (tabName) => {
     setActiveTab(tabName);
@@ -150,7 +150,7 @@ export default function Progress() {
 
               <h3>
                 You unlocked your 1-day streak goal! Check out your{" "}
-                <Link to="/reward" className="text-red-600 hover:text-blue-400">
+                <Link to="/reward" className="text-[#F61B01]  hover:text-blue-400">
                   reward
                 </Link>
               </h3>

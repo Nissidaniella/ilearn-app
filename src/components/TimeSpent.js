@@ -42,7 +42,7 @@ const TimeSpent = () => {
     datasets: [
       {
         data: [timeSpend, remainingTime],
-        backgroundColor: [getColorForMinute(timeSpend), 'rgb(2, 11, 170)'],
+        backgroundColor: [getColorForMinute(timeSpend), '#F61B01 '],
         borderWidth: 1,
       },
     ],

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-  background-color: hsla(180, 6%, 3%, 0.965);
+  background-color: hsla(0, 0%, 100%, 0.965);
 }
 
 
@@ -477,8 +477,8 @@ body{
 
 .menu-card {
   margin: 20px;
-  background-color: #020baa;
-  box-shadow: 0px 8px 28px -9px rgb(0, 0, 0);
+  background-color:rgb(6, 8, 45);
+  box-shadow: 0px 8px 28px -9px rgb(31, 30, 30);
   width: 240px;
   height: 630px;
   border-radius: 16px;
@@ -499,7 +499,7 @@ body{
   margin-bottom: 10px;
   margin: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  background-color: rgba(255, 255, 255, 0.856);
+  background-color:#DADBF3;
 }
 
 .menu-content .menu ul{
@@ -617,7 +617,7 @@ body{
   padding: 0px 50px;
   height: 60px;
   gap: 100px;
-  background-color: #ffffff;
+  background-color: #DADBF3;
   border-radius: 16px;
   width: 100;
 }
@@ -981,7 +981,7 @@ font-weight: 500;
 }
 
 .profile-card-front {
-  background-color:rgb(2, 11, 170);
+  background-color:rgb(6, 8, 45);
   display: flex;
   align-items: center;
   border-radius: 10px;
@@ -994,7 +994,7 @@ font-weight: 500;
 }
 
 .profile-card-back {
-  background-color: #000000;
+  background-color:rgb(6, 8, 45);
   display: flex;
   border-radius: 10px;
   align-items: center;
@@ -1078,7 +1078,7 @@ font-weight: 500;
 .sidebar{
   border-radius: 16px;
   margin-right: 5px;
-  background-color: #020aaaaf;
+  background-color:rgb(6, 8, 45);
   width: 230px;
   position: relative;
 }
@@ -1102,7 +1102,7 @@ width: 200px;
 }
 
 .black{
-  color: rgb(0, 0, 0);
+  color: rgb(215, 206, 206);
   font-size: 20px;
   text-shadow: 2px 2px 5px rgba(48, 24, 24, 0.48);
   font-weight: 900;
@@ -1223,7 +1223,7 @@ width: 960px;
 .content-section {
   width: 100%;
   height: 555px;
-  background-color:#020aaa;
+  background-color:rgb(6, 8, 45);
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   color: #ffffff;
@@ -1410,7 +1410,7 @@ width: 960px;
 }
 
 .notification-container{
-  background-color:#020BAA;
+  background-color:rgb(6, 8, 45);
   border-radius: 16px;
   margin:20px 0;
   height: 550px;
@@ -1591,7 +1591,7 @@ gap: 30px;
 }
 
 .progress1 h3{
-  background-color: rgb(42, 42, 42);
+  background-color:rgb(6, 8, 45);
  width: 100%;
  color: white;
  padding: 10px;
@@ -1603,14 +1603,14 @@ gap: 30px;
 
 .progress1 .big{
   font-size: 40px;
-  background-color: rgb(42, 42, 42);
+  background-color:rgb(6, 8, 45);
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   padding-left: 20px;
 }
 
 .progress1 form{
-  background-color: rgb(42, 42, 42);
+  background-color:rgb(6, 8, 45);
   width: 100%;
   padding: 10px;
   padding-left: 30px;
@@ -1638,7 +1638,7 @@ gap: 30px;
 
 
 .progress-menu li.active {
-  background-color: black;
+  background-color:rgb(6, 8, 45);
   color: white; 
 }
 
@@ -1656,11 +1656,11 @@ display: flex;
   font-weight: 400;
   color: hsl(132, 100%, 1%);
   border-radius: 10px;
-  background-color: #ff0000ee;
+  background-color: #F61B01; 
 }
   
 .chart {
-  background-color: #0b0b0b;
+  background-color:rgb(6, 8, 45);
   padding: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.509);
   border-radius: 8px;

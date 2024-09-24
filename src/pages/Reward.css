@@ -1,12 +1,14 @@
 
 .reward{  
    display: flex;
+   background-color:rgb(6, 8, 45);
+   height: 100vh;
 }
 
 p .red{
   font-weight: 700;
   opacity: 1;
-  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  background: linear-gradient(-45deg, #29a9f8 0%, #fa0000 100% );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -16,7 +18,7 @@ p .red{
 h3 .red{
   font-weight: 700;
   opacity: 1;
-  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  background: linear-gradient(-45deg, #29a9f8 0%, #fa0000 100% );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -51,7 +53,7 @@ h3 .red{
 
 .reward h2{
   font-size: 3rem;
-  color: #004ff9;
+  color: #fd5e5e;
   font-weight: 600;
   margin-top: 165px;
   margin-left: 70px;
