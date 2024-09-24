@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import image from "../images/logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGrip, faSwatchbook, faClipboardList, faBarsProgress, faMessage, faBell, faGear } from '@fortawesome/free-solid-svg-icons'
-
+import Navbar from "../components/Navbar";
 
 
 export default function Courses() {
@@ -51,6 +51,11 @@ export default function Courses() {
   </div>
 </div>
 
+<div className="courses-content">
+        <Navbar/>
+
+        <div className="courses-container"></div>
+      </div>
 
 
 

@@ -12,6 +12,7 @@ import {
   faBell,
   faGear,
 } from "@fortawesome/free-solid-svg-icons";
+import Navbar from "../components/Navbar";
 
 export default function Classes() {
   return (
@@ -81,6 +82,11 @@ export default function Classes() {
             </ul>
           </div>
         </div>
+      </div>
+
+      <div className="classes-content">
+        <Navbar/>
+        <div className="courses-container"></div>
       </div>
 
     

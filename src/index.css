@@ -1687,12 +1687,60 @@ color: #ffffff;
 /* end of progress css */
 
 
+/* start of courses css */
+.courses{
+  display: flex;
+  flex-direction: row;
+}
+
+.courses .courses-content{
+  margin: 20px 20px 0 20px;
+  height: 630px;
+  border-radius: 16px;
+width: 960px;
+}
+
+.courses-container{
+  background: rgb(218, 219, 243);
+  margin-top: 20px;
+  height: 550px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  gap: 30px;
+  }
+
+  /* end of courses css */
 
 
 
 
+  /* start of classes css */
+.classes{
+  display: flex;
+  flex-direction: row;
+}
 
+.classes .classes-content{
+  margin: 20px 20px 0 20px;
+  height: 630px;
+  border-radius: 16px;
+width: 960px;
+}
 
+.classes-container{
+  background: rgb(218, 219, 243);
+  margin-top: 20px;
+  height: 550px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  gap: 30px;
+  }
+
+  /* end of classes css */
 
 
 
