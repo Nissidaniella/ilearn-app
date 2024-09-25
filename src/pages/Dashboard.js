@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 import image from "../images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGrip,
   faSwatchbook,
-  faClipboardList,
   faBarsProgress,
   faMessage,
   faBell,
@@ -19,6 +18,8 @@ import ProfileBack from "../components/ProfileBack";
 
 
 export default function Dashboard() {
+  
+
   return (
     <div className="dashboard">
       <div class="menu-card  custom:block">
@@ -43,12 +44,12 @@ export default function Dashboard() {
                 </Link>
               </li>
 
-              <li>
+              {/* <li>
                 <FontAwesomeIcon icon={faClipboardList} className="icon" />
                 <Link to="/classes" className="menu-link">
                   My Classes
                 </Link>
-              </li>
+              </li> */}
 
               <li>
                 <FontAwesomeIcon icon={faBarsProgress} className="icon" />
@@ -85,7 +86,6 @@ export default function Dashboard() {
 
       <div className="dashboard-content">
         <Navbar />
-       
 
         <div className="dashboard-container flex flex-row md:flex-row">
           <div className="courses-link">
@@ -98,40 +98,60 @@ export default function Dashboard() {
             </div>
 
             <div class="cards">
-              <div class="card red">
-                <p class="text">Lorem Ipsum</p>
+              <div class="card math">
+
+                <div className="card1">
+                  <span className="card-logo">Ϻ</span>
+                  <span className="card-text">Mathematics <br>
+                  </br><span className="lessons-text">6 Lessons</span></span>
+                </div>
+                <div className="card2">
+                  <span className="rate"> Rate  ⭐4.5 </span>
+                  
+                </div>
+
               </div>
-              <div class="card blue">
-                <p class="text">Lorem Ipsum</p>
+
+
+              <div class="card science">
+              <div className="card1">
+                  <span className="card-logo">Ě</span>
+                  <span className="card-text">English Lang <br>
+                  </br><span className="lessons-text">9 Lessons</span></span>
+                </div>
+                <div className="card2">
+                  <span className="rate"> Rate  ⭐6.0 </span>
+                  
+                </div>
               </div>
-              <div class="card green">
-                <p class="text">Lorem Ipsum</p>
+
+
+              <div class="card english">
+              <div className="card1">
+                  <span className="card-logo">Š</span>
+                  <span className="card-text">Intergrated S <br>
+                  </br><span className="lessons-text">15 Lessons</span></span>
+                </div>
+                <div className="card2">
+                  <span className="rate"> Rate  ⭐5.7 </span>
+                  
+                </div>
               </div>
             </div>
 
-            <div className="time-video flex">
-              <div className="time bg-white"> timeee</div>
-              <div className="video bg-white">vod</div>
-            </div>
+    <div className="video">
+  <iframe 
+    width="100%" 
+    height="100%" 
+    src="https://www.youtube.com/embed/4Oy-z4Q2K0E" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
 
-            <div className="assignments">
-            <div className="courses-link-heading">
-              {" "}
-              <h1>Available Classes</h1>
-              <Link to="/classes" className="button-link">
-                <Buttons />
-              </Link>
-            </div>
-              
-              <a class="btn" href="#">
-                I am a button
-              </a>
-
-              <a class="btn" href="#">
-                I am a button
-              </a>
-              
-            </div>
+          
           </div>
 
           <div className="profile-card">

@@ -491,6 +491,7 @@ body{
   align-items: center;
   flex-direction: column;
 
+
 }
 
 .menu-content .logo{
@@ -510,6 +511,7 @@ body{
   gap:15px ;
   color: white;
 
+
 }
 
 .menu-content .menu li{
@@ -520,9 +522,13 @@ body{
   margin-right: 8px;
   font-size: 20px; 
 
+
 }
 
 .menu .active {
+  position: relative;
+
+
   position: relative;
 
 
@@ -545,6 +551,7 @@ body{
   height: 1px;
   bottom: 0;
   left: 0;
+  background-color: rgb(254, 1, 1); 
   background-color: rgb(254, 1, 1); 
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
@@ -690,7 +697,7 @@ body{
   background-color: #f9f9f9;
   min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
- margin-left: -30px;
+ margin-left: 80px;
   z-index: 1;
 }
 
@@ -718,6 +725,7 @@ body{
 .dashboard-content{
   width: 75%;
   margin: 20px;}
+  
 
 
 
@@ -725,13 +733,17 @@ body{
   background-color: rgb(218, 219, 243);
   border-radius: 16px;
   margin:20px 0;
-  height: 550px;
-}
+  height: 550px;}
+
+
+
 
 .dashboard-container .courses-link{
   width: 60%;
   padding: 20px;
+ 
 }
+
 
 .dashboard-container .courses-link-heading
 {
@@ -763,6 +775,7 @@ font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
   border: 4px solid rgb(246, 27, 1);
+  border: 4px solid rgb(246, 27, 1);
   border-radius: 0;
   position: relative;
   transition: all 700ms ease;
@@ -781,6 +794,7 @@ font-weight: 500;
 }
 
 .c-button--gooey .c-button__blobs div {
+  background-color: rgb(246, 27, 1);
   background-color: rgb(246, 27, 1);
   width: 34%;
   height: 100%;
@@ -820,18 +834,57 @@ font-weight: 500;
   justify-content: center;
   margin-top: 10px;
   
+  
 }
 
-.cards .red {
-  background-color: #ffffff;
+.cards .math {
+  background-color: #06082dd1;
+  
 }
 
-.cards .blue {
-  background-color: #ffffff;
+.cards .card1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 15px;
+  color: #fff7f7;
 }
 
-.cards .green {
-  background-color: #ffffff;
+.card1 .card-logo {
+  font-size: 20px;
+  color: #06082D;
+  background-color: rgb(254, 1, 1); 
+  padding: 15px;
+  border-radius: 50%;
+  height: 27px;
+  width: 27px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.lessons-text {
+  font-size: 12px;
+  color: #a95757; 
+  font-weight: 500;
+}
+
+.card2 .rate{
+  font-size: 13px;
+  color: #afafaf;
+}
+
+
+.cards .science {
+  background-color: #06082dd1;
+ 
+}
+
+.cards .english {
+  background-color: #06082dd1;
+ 
 }
 
 .cards .card {
@@ -848,107 +901,14 @@ font-weight: 500;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.cards .card p.tip {
-  font-size: 1em;
-  font-weight: 700;
-}
 
-.cards .card p.second-text {
-  font-size: 0.7em;
-}
-
-
-.time-video{
+.video {
   margin: 20px 0;
-  height: 175px;
-  gap: 15px;
-}
-
-.time-video .time {
-  width: 50%;
+  height: 345px;
   border-radius: 16px;
-}
-
-.time-video .video {
-  width: 50%;
-  border-radius: 16px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.assignments{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 150px;
-}
-
-
-.btn {
-  display: inline-block;
-  padding: 10px;
-  font-size: 16px;
-  font-weight: 700;
-  color: white;
-  border: 1px solid rgb(2, 11, 170);
-  border-radius: 16px;
-  cursor: pointer;
-  position: relative;
-  background-color: transparent;
-  text-decoration: none;
+  background-color: #000000;
   overflow: hidden;
-  z-index: 1;
-  font-family: inherit;
-  
- }
- 
- .btn::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #F61B01;
-  transform: translateX(-100%);
-  transition: all .3s;
-  z-index: -1;
- }
- 
- .btn:hover::before {
-  transform: translateX(0);
- }
+}
 
 
 /* start of profile css */
@@ -1002,6 +962,12 @@ font-weight: 500;
   transform: rotateY(180deg);
   padding: 10px;
   color: white;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+  padding: 10px;
+  color: white;
 }
 
 .profile-front{
@@ -1017,17 +983,19 @@ font-weight: 500;
 }
 
  .profile-front img{
-  background-color: #000000;
+  /* background-color: #000000; */
+  background-size: contain;
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
-  margin-top: 10px;
-}
+  margin-top: 10px;}
+
 
 .profile-front h2{
   margin-top: 20px;
   font-size: 20px;
   border-bottom: 2px solid #F61B01 ;
+  text-align: center;
   
 }
 
@@ -1049,18 +1017,38 @@ font-weight: 500;
   font-size: 2.9rem;
   font-weight: 100;
 }
-.profile-back p{
-  font-weight: 600;
-  text-transform: uppercase;
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
+
+
+ .profile-back .choose{
+  background-color: #000000;
+
+ }
 
 .profile-back input{
   color: #ffffff;
   background-color: transparent;
   border-bottom: 1px solid white;
   padding: 10px 0;
-  outline: none;
-}
+  outline: none;}
+
+
+
+
+
+
 
 /* end of profile css */
 
@@ -1141,35 +1129,6 @@ text-align: start;
 /* end of chatbox css */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* settings menu css */
 .settings{
   display: flex;
@@ -1190,6 +1149,8 @@ width: 960px;
 .settings-menu {
   width: 200px;
   height: 100%;
+  background-color:rgb(218, 219, 243);
+  color: #000000;
   background-color:rgb(218, 219, 243);
   color: #000000;
   padding: 20px;
@@ -1213,6 +1174,7 @@ width: 960px;
 
 .settings-menu button.active {
   background-color:#F61B01;
+  background-color:#F61B01;
   color: #fff;
   position: relative;
 }
@@ -1226,6 +1188,7 @@ width: 960px;
   background-color:rgb(6, 8, 45);
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
+  color: #ffffff;
   color: #ffffff;
  
 }
@@ -1241,7 +1204,6 @@ width: 960px;
   max-width: 650px;
   margin: auto;
 }
-
 
 
 
@@ -1264,13 +1226,31 @@ width: 960px;
 
 .delete p{
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+  text-shadow: 2px 2px 5px rgb(1, 1, 1);
+}
+
+.password label {
+  text-shadow: 2px 2px 5px rgb(1, 1, 1);
+  font-weight: bold;
+}
+
+.delete label {
+  text-shadow: 2px 2px 5px rgb(1, 1, 1);
+  font-weight: bold;
+}
+
+.delete p{
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
 }
 
 /* Style input fields */
 .profileS-container input {
   width: 70%;
+  width: 70%;
   padding: 10px;
   margin-bottom: 16px;
+  border-bottom: 1px solid #ffffff;
+  background-color: transparent;
   border-bottom: 1px solid #ffffff;
   background-color: transparent;
   
@@ -1368,13 +1348,14 @@ width: 960px;
 /* start of security settings css */
 .authentication-container {
   width: 70%;
-  margin: 0 0 0 90px;
+  margin: 0 0 0 60px;
 }
 
 
 .authentication-container form {
   display: flex;
   flex-direction: column;
+ 
  
 }
 
@@ -1383,14 +1364,35 @@ width: 960px;
   margin-bottom: 8px;
   margin-top: 15px;
   text-shadow: 2px 2px 5px rgb(1, 1, 1);
+  margin-top: 15px;
+  text-shadow: 2px 2px 5px rgb(1, 1, 1);
 }
 
 .authentication-container input {
   padding: 10px;
   border-bottom: 1px solid #ccc;
   background-color: transparent;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
 }
 /* end of security settings css */
+
+/* start of notification page css */
+.notifications{
+  display: flex;
+}
+
+
+.notifications-content{
+ margin: 20px 20px 0 20px;
+  height: auto; 
+  border-radius: 16px;
+width: 960px;
+  display: flex;
+  flex-direction: column;
+ 
+  
+}
 
 /* start of notification page css */
 .notifications{
@@ -1418,6 +1420,7 @@ width: 960px;
   flex-direction: row;
   
   
+  
 }
 
 .N-container{
@@ -1442,7 +1445,6 @@ width: 960px;
   font-weight: 700;
   text-align: start;
   padding: 25px 2px;
-  /* text-shadow: 2px 2px red; */
   text-shadow: 2px 2px 5px rgb(69, 66, 66);
 
   
@@ -1455,18 +1457,34 @@ width: 960px;
   height: 80px;
   padding: 13px ;
   text-shadow: 2px 2px 5px rgb(1, 1, 1);
+ 
 }
 
-.form-group{
-  justify-content: center;
-
+.notifications .form-group{
+  width: 500px;
+  height: 80px;
+  padding: 13px ;
+  text-shadow: 2px 2px 5px rgb(1, 1, 1);
+  
+  margin: 0px 0px 10px 60px;
+  
 }
+
+
 
 .notification-container label p{
   color: #7f7f7f;
   font-size: 13px;
 }
 .my-form {
+ 
+  width: 69%;
+
+
+
+  --_clr-primary: #ffffff;
+  --_clr-hover: #fa1919;
+  --_clr-checked: #cf1212;
   
   width: 69%;
 
@@ -1506,6 +1524,7 @@ width: 960px;
   display: grid;
   place-content: center;
   cursor: pointer;
+  
   
 }
 .my-form input[type="checkbox"]::after {
@@ -1591,7 +1610,7 @@ gap: 30px;
 }
 
 .progress1 h3{
-  background-color:rgb(6, 8, 45);
+  background-color: #06082dd1;
  width: 100%;
  color: white;
  padding: 10px;
@@ -1603,14 +1622,14 @@ gap: 30px;
 
 .progress1 .big{
   font-size: 40px;
-  background-color:rgb(6, 8, 45);
+  background-color: #06082dd1;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   padding-left: 20px;
 }
 
 .progress1 form{
-  background-color:rgb(6, 8, 45);
+  background-color: #06082dd1;
   width: 100%;
   padding: 10px;
   padding-left: 30px;
@@ -1638,7 +1657,7 @@ gap: 30px;
 
 
 .progress-menu li.active {
-  background-color:rgb(6, 8, 45);
+  background-color: #06082dd1;
   color: white; 
 }
 
@@ -1706,10 +1725,67 @@ width: 960px;
   height: 550px;
   border-radius: 16px;
   display: flex;
-  flex-direction: row;
-  padding: 20px;
+  flex-direction: column;
+  padding: 10px 20px;
   gap: 30px;
   }
+
+  .courses h1{
+    color: black;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(48, 48, 48, 0.687);
+  }
+  
+
+  .courses-container1{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-around;
+  }
+
+  .course-section{
+    background-color:rgb(6, 8, 45);
+    width: 270px;
+    height: 400px;
+    border-radius: 16px;
+    padding: 10px;
+  }
+
+  .course-section h2{
+    color: white;
+    text-shadow: 2px 2px 5px rgba(205, 205, 205, 0.564);
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .course-section a{
+    color: red;
+  }
+
+  .course-section a:hover{
+    color: rgb(255, 255, 255);
+  }
+
+  .course-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0px 10px;
+  }
+  
+  .course-link {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .video-link {
+    flex: 1;
+    text-align: right;
+  }
+
+
 
   /* end of courses css */
 
@@ -1717,7 +1793,7 @@ width: 960px;
 
 
   /* start of classes css */
-.classes{
+/* .classes{
   display: flex;
   flex-direction: row;
 }
@@ -1738,13 +1814,6 @@ width: 960px;
   flex-direction: row;
   padding: 20px;
   gap: 30px;
-  }
+  } */
 
   /* end of classes css */
-
-
-
-
-
-
-

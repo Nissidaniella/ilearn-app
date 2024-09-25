@@ -5,7 +5,7 @@ import 'chart.js/auto';
 const DaySpent = () => {
   const [timeSpent, setTimeSpent] = useState(() => {
     const storedTimeSpent = localStorage.getItem('timeSpent');
-    return storedTimeSpent ? parseInt(storedTimeSpent) : 0;
+    return storedTimeSpent ? parseInt(storedTimeSpent) : 2;
   });
 
   const [startTime, setStartTime] = useState(new Date().getTime());
@@ -15,8 +15,8 @@ const DaySpent = () => {
 
     const updateTimeSpent = () => {
       const currentTime = new Date().getTime();
-      const timeDiff = (currentTime - startTime) / 1000 / 60; // convert to minutes
-      const newTimeSpent = Math.floor(timeDiff);
+      const timeDiff = (currentTime - startTime) / (1000 * 60 * 60 * 24); // convert to minutes
+      const newTimeSpent = Math.floor(timeDiff) + 2;
       setTimeSpent(newTimeSpent);
       localStorage.setItem('timeSpent', newTimeSpent.toString());
     };
@@ -28,7 +28,7 @@ const DaySpent = () => {
     };
   }, [startTime]);
 
-  const remainingTime = 60 - timeSpent;
+  const remainingTime = 7 - timeSpent;
 
   const getColorForMinute = (minute) => {
     const colors = [

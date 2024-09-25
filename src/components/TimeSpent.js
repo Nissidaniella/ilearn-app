@@ -3,46 +3,52 @@ import { Doughnut } from 'react-chartjs-2';
 import 'chart.js/auto';
 
 const TimeSpent = () => {
-  const [timeSpend, setTimeSpend] = useState(() => {
-    const storedTimeSpend = localStorage.getItem('timeSpent');
-    return storedTimeSpend ? parseInt(storedTimeSpend) : 0;
+  const [timeSpent, setTimeSpent] = useState(() => {
+    const storedTimeSpent = localStorage.getItem('timeSpent');
+    return storedTimeSpent ? parseInt(storedTimeSpent) : 0;
   });
 
-  const [startTime, setStartTime] = useState(new Date().getTime());
+  const [startTime, setStartTime] = useState(() => {
+    const storedStartTime = localStorage.getItem('startTime');
+    return storedStartTime ? parseInt(storedStartTime) : new Date().getTime();
+  });
 
   useEffect(() => {
-    let intervalId;
+    // Save the start time to localStorage if it isn't already stored
+    if (!localStorage.getItem('startTime')) {
+      localStorage.setItem('startTime', startTime.toString());
+    }
 
     const updateTimeSpent = () => {
       const currentTime = new Date().getTime();
       const timeDiff = (currentTime - startTime) / 1000 / 60; // convert to minutes
-      const newTimeSpend = Math.floor(timeDiff);
-      setTimeSpend(newTimeSpend);
-      localStorage.setItem('timeSpend', newTimeSpend.toString());
+      const newTimeSpent = Math.floor(timeDiff);
+      setTimeSpent(newTimeSpent);
+      localStorage.setItem('timeSpent', newTimeSpent.toString());
     };
 
-    intervalId = setInterval(updateTimeSpent, 1000);
+    const intervalId = setInterval(updateTimeSpent, 1000);
 
     return () => {
       clearInterval(intervalId);
     };
   }, [startTime]);
 
-  const remainingTime = 60 - timeSpend;
+  const remainingTime = 60 - timeSpent;
 
   const getColorForMinute = (minute) => {
     const colors = [
-      'red', 'green', 'blue', 'purple', 'orange', 'teal', 'pink', 'gold, orange, black'
+      'red', 'green', 'blue', 'purple', 'orange', 'teal', 'pink'
     ];
     return colors[minute % colors.length];
   };
 
   const chartData = {
-    labels: [`Spent ${timeSpend} min`, `Remaining ${remainingTime} min`],
+    labels: [`Spent ${timeSpent} min`, `Remaining ${remainingTime} min`],
     datasets: [
       {
-        data: [timeSpend, remainingTime],
-        backgroundColor: [getColorForMinute(timeSpend), '#F61B01 '],
+        data: [timeSpent, remainingTime],
+        backgroundColor: [getColorForMinute(timeSpent), '#F61B01 '],
         borderWidth: 1,
       },
     ],
@@ -50,19 +56,10 @@ const TimeSpent = () => {
 
   return (
     <div className='progress-chart'>
-     <p className='progress-text'> {timeSpend} minutes on the app.</p>
+      <p className='progress-text'>{timeSpent} minutes on the app.</p>
       <Doughnut data={chartData} />
     </div>
   );
 };
 
 export default TimeSpent;
-
-
-
-
-
-
-
-
-

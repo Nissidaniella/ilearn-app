@@ -1,6 +1,6 @@
 import React from "react";
 import "../index.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import image from "../images/login-img.png";
 import { auth } from "../Config/firebase";
 import { useState } from "react";
@@ -11,7 +11,7 @@ import {
   GithubAuthProvider,
   GoogleAuthProvider,
 } from "firebase/auth";
-import dashboard from "./Dashboard";
+
 
 
 
@@ -19,6 +19,7 @@ import dashboard from "./Dashboard";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
 
   const handleLogin = async () => {
     try {
@@ -35,6 +36,7 @@ const Login = () => {
     try {
       await signInWithPopup(auth, provider);
       console.log("User SIgned Up successfully!");
+      navigate('/Dashboard');
     } catch (err) {
       console.error(err);
     }
@@ -46,6 +48,7 @@ const Login = () => {
     try {
       await signInWithPopup(auth, provider);
       console.log("User SIgned Up successfully!");
+      navigate('/Dashboard');
     } catch (err) {
       console.error(err);
     }
@@ -57,6 +60,7 @@ const Login = () => {
     try {
       await signInWithPopup(auth, provider);
       console.log("User SIgned Up successfully!");
+      navigate('/Dashboard');
     } catch (err) {
       console.error(err);
     }

@@ -47,6 +47,10 @@ export function App() {
   );
 }
 
+
+
+
+
 export default function AppWrapper() {
   return (
     <Router>
@@ -72,7 +76,7 @@ export default function AppWrapper() {
               <Helmet>
                 <title>Dashboard Page</title>
               </Helmet>
-              <Dashboard />
+              <Dashboard  />
             </>
           }
         />
