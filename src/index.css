@@ -837,18 +837,53 @@ font-weight: 500;
   
 }
 
-.cards .red {
-  background-color: #ffffff;
+.cards .math {
+  background-color: #06082dd1;
   
 }
 
-.cards .blue {
-  background-color: #ffffff;
+.cards .card1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 15px;
+  color: #fff7f7;
+}
+
+.card1 .card-logo {
+  font-size: 20px;
+  color: #06082D;
+  background-color: rgb(254, 1, 1); 
+  padding: 15px;
+  border-radius: 50%;
+  height: 27px;
+  width: 27px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.lessons-text {
+  font-size: 12px;
+  color: #a95757; 
+  font-weight: 500;
+}
+
+.card2 .rate{
+  font-size: 13px;
+  color: #afafaf;
+}
+
+
+.cards .science {
+  background-color: #06082dd1;
  
 }
 
-.cards .green {
-  background-color: #ffffff;
+.cards .english {
+  background-color: #06082dd1;
  
 }
 
@@ -866,74 +901,14 @@ font-weight: 500;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.cards .card p.tip {
-  font-size: 1em;
-  font-weight: 700;
-}
 
-.cards .card p.second-text {
-  font-size: 0.7em;
-}
-
-
-.time-video{
+.video {
   margin: 20px 0;
-  height: 175px;
-  gap: 15px;
-}
-
-.time-video .time {
-  width: 50%;
+  height: 345px;
   border-radius: 16px;
-}
-
-.time-video .video {
-  width: 50%;
-  border-radius: 16px;
-}
-
-.assignments{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 150px;
-}
-
-
-.btn {
-  display: inline-block;
-  padding: 10px;
-  font-size: 16px;
-  font-weight: 700;
-  color: white;
-  border: 1px solid rgb(2, 11, 170);
-  border-radius: 16px;
-  cursor: pointer;
-  position: relative;
-  background-color: transparent;
-  text-decoration: none;
+  background-color: #000000;
   overflow: hidden;
-  z-index: 1;
-  font-family: inherit;
-  
- }
- 
- .btn::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #F61B01;
-  transform: translateX(-100%);
-  transition: all .3s;
-  z-index: -1;
- }
- 
- .btn:hover::before {
-  transform: translateX(0);
- }
+}
 
 
 /* start of profile css */
@@ -1042,10 +1017,7 @@ font-weight: 500;
   font-size: 2.9rem;
   font-weight: 100;
 }
-/* .profile-back p{
-  font-weight: 600;
-  text-transform: uppercase;
-} */
+
 
 .visually-hidden {
   position: absolute;
@@ -1232,10 +1204,6 @@ width: 960px;
   max-width: 650px;
   margin: auto;
 }
-
-
-
-
 
 
 
@@ -1642,7 +1610,7 @@ gap: 30px;
 }
 
 .progress1 h3{
-  background-color:rgb(6, 8, 45);
+  background-color: #06082dd1;
  width: 100%;
  color: white;
  padding: 10px;
@@ -1654,14 +1622,14 @@ gap: 30px;
 
 .progress1 .big{
   font-size: 40px;
-  background-color:rgb(6, 8, 45);
+  background-color: #06082dd1;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   padding-left: 20px;
 }
 
 .progress1 form{
-  background-color:rgb(6, 8, 45);
+  background-color: #06082dd1;
   width: 100%;
   padding: 10px;
   padding-left: 30px;
@@ -1689,7 +1657,7 @@ gap: 30px;
 
 
 .progress-menu li.active {
-  background-color:rgb(6, 8, 45);
+  background-color: #06082dd1;
   color: white; 
 }
 
@@ -1825,7 +1793,7 @@ width: 960px;
 
 
   /* start of classes css */
-.classes{
+/* .classes{
   display: flex;
   flex-direction: row;
 }
@@ -1846,6 +1814,6 @@ width: 960px;
   flex-direction: row;
   padding: 20px;
   gap: 30px;
-  }
+  } */
 
   /* end of classes css */

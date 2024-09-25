@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGrip,
   faSwatchbook,
-  faClipboardList,
   faBarsProgress,
   faMessage,
   faBell,
@@ -16,15 +15,9 @@ import Buttons from "../components/Buttons";
 import Navbar from "../components/Navbar";
 import ProfileFront from "../components/ProfileFront";
 import ProfileBack from "../components/ProfileBack";
-// import Activity from "../components/Activity";
+
 
 export default function Dashboard() {
-
-//AIzaSyA0yiVthnCjgym7AgahdQny-7n6W7C8VYY  - youtube api key
-
-
-
-
 
   return (
     <div className="dashboard">
@@ -104,40 +97,60 @@ export default function Dashboard() {
             </div>
 
             <div class="cards">
-              <div class="card red">
-                <p class="text">Lorem Ipsum</p>
+              <div class="card math">
+
+                <div className="card1">
+                  <span className="card-logo">Ϻ</span>
+                  <span className="card-text">Mathematics <br>
+                  </br><span className="lessons-text">6 Lessons</span></span>
+                </div>
+                <div className="card2">
+                  <span className="rate"> Rate  ⭐4.5 </span>
+                  
+                </div>
+
               </div>
-              <div class="card blue">
-                <p class="text">Lorem Ipsum</p>
+
+
+              <div class="card science">
+              <div className="card1">
+                  <span className="card-logo">Ě</span>
+                  <span className="card-text">English Lang <br>
+                  </br><span className="lessons-text">9 Lessons</span></span>
+                </div>
+                <div className="card2">
+                  <span className="rate"> Rate  ⭐6.0 </span>
+                  
+                </div>
               </div>
-              <div class="card green">
-                <p class="text">Lorem Ipsum</p>
+
+
+              <div class="card english">
+              <div className="card1">
+                  <span className="card-logo">Š</span>
+                  <span className="card-text">Intergrated S <br>
+                  </br><span className="lessons-text">15 Lessons</span></span>
+                </div>
+                <div className="card2">
+                  <span className="rate"> Rate  ⭐5.7 </span>
+                  
+                </div>
               </div>
             </div>
 
-            <div className="time-video flex">
-              <div className="time bg-white"> timeee</div>
-              <div className="video bg-white">vod</div>
-            </div>
+    <div className="video">
+  <iframe 
+    width="100%" 
+    height="100%" 
+    src="https://www.youtube.com/embed/4Oy-z4Q2K0E" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
 
-            <div className="assignments">
-            <div className="courses-link-heading">
-              {" "}
-              <h1>Available Classes</h1>
-              <Link to="/classes" className="button-link">
-                <Buttons />
-              </Link>
-            </div>
-              
-              <a class="btn" href="#">
-                I am a button
-              </a>
-
-              <a class="btn" href="#">
-                I am a button
-              </a>
-              
-            </div>
+          
           </div>
 
           <div className="profile-card">
