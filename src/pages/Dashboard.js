@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 import image from "../images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -18,6 +18,7 @@ import ProfileBack from "../components/ProfileBack";
 
 
 export default function Dashboard() {
+  
 
   return (
     <div className="dashboard">

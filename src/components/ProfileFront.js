@@ -1,12 +1,17 @@
-import React, { useState, useEffect } from "react";
-import "../index.css";
-import image from "../images/edu1.png";
+import React, {useState, useEffect} from 'react';
+import '../index.css';
+import image from '../images/edu1.png';
 import { getAuth } from "firebase/auth";
 
-const ProfileFront = ({ profileImage = "", socialMediaLinks = [] }) => {
-  const [user, setUser] = useState(null);
 
-  // Function to fetch user info after login
+
+const ProfileFront = ({
+    
+      profileImage = '', socialMediaLinks = [] }) => {
+        const [user, setUser] = useState(null);
+        
+
+          // Function to fetch user info after login
   useEffect(() => {
     const auth = getAuth();
     const loggedInUser = auth.currentUser;
@@ -20,32 +25,31 @@ const ProfileFront = ({ profileImage = "", socialMediaLinks = [] }) => {
     }
   }, [profileImage]);
 
+
+
   return (
     <div className="profile-front">
-      <h1>Welcome!</h1>
-
+      <h1>Welcome!
+        </h1>
+     
       {user ? (
         <div>
-          {/* Profile Image */}
-          <div className="profile-image">
-            <img src={user.photo} alt="User Profile" className="user-avatar" />
-          </div>
-
-          {/* User Name and Email */}
-          <div className="user-name">
-            <h2>{user.name}</h2>
-            {/* <p>{user.email}</p> */}
-          </div>
-        </div>
-      ) : (
-        // Loading or fallback content
-        <div>Loading user data...</div>
-      )}
-
-      {/* Additional Image */}
-      <div className="edu">
-        <img src={image} alt="" className=" " />
+      <div className="profile-image">
+        <img src={user.photo} alt="User Profile" />
       </div>
+      <div className="user-name">     
+        <h2>{user.name}</h2>
+        <h2>{user.email}</h2>
+        
+        </div>
+        </div>
+      ):(
+        <div>Loading...</div>
+      )}
+        <div className='edu'>   <img src={image} alt="" className=' ' />  </div>
+       
+      
+
     </div>
   );
 };

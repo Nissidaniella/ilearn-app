@@ -4,26 +4,23 @@ import { faCamera } from '@fortawesome/free-solid-svg-icons';
 import { getAuth, updateProfile, updateEmail, updatePassword } from 'firebase/auth';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import '../index.css';
+import { getAuth, updateProfile, } from 'firebase/auth';
+import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
-export default function ProfileBack() {
-  const [userName, setUserName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [profilePicture, setProfilePicture] = useState(null);
-  const [user, setUser] = useState(null);
+export default function ProfileBack({ user, setUser }) {
+  const [userName, setUserName] = useState(user?.name || '');
+  const [email, setEmail] = useState(user?.email || '');
+   const [profilePicture, setProfilePicture] = useState(null);
 
   const auth = getAuth();
   const storage = getStorage();
 
-  // Fetch user info
   useEffect(() => {
-    const loggedInUser = auth.currentUser;
-    if (loggedInUser) {
-      setUser(loggedInUser);
-      setUserName(loggedInUser.displayName || '');
-      setEmail(loggedInUser.email || '');
+    if (user) {
+      setUserName(user.name);
+      setEmail(user.email);
     }
-  }, [auth]);
+  }, [user]);
 
   const handleProfilePictureChange = (event) => {
     const file = event.target.files[0];
@@ -32,38 +29,35 @@ export default function ProfileBack() {
 
   const handleSave = async () => {
     try {
+      let photoURL = user.photo;
+      
       // 1. Update profile picture if a new one is selected
       if (profilePicture) {
-        const profilePictureRef = ref(storage, `profilePictures/${user.uid}`);
+        const profilePictureRef = ref(storage, `profilePictures/${auth.currentUser.uid}`);
         await uploadBytes(profilePictureRef, profilePicture);
-        const photoURL = await getDownloadURL(profilePictureRef);
+        photoURL = await getDownloadURL(profilePictureRef);
 
         await updateProfile(auth.currentUser, { photoURL });
       }
 
       // 2. Update username
-      if (userName !== user.displayName) {
+      if (userName !== user.name) {
         await updateProfile(auth.currentUser, { displayName: userName });
       }
 
-      // 3. Update email
-      if (email !== user.email) {
-        await updateEmail(auth.currentUser, email);
-      }
-
-      // 4. Update password
-      if (password) {
-        await updatePassword(auth.currentUser, password);
-      }
-
-      // Fetch the updated user data
-      setUser(auth.currentUser);
+     
+      // Update user state in the parent component
+      setUser({
+        ...user,
+        name: userName,
+        email: email,
+        photo: photoURL,
+      });
 
       // Clear input fields after save
       setUserName('');
       setEmail('');
-      setPassword('');
-      setProfilePicture(null);
+           setProfilePicture(null);
 
       console.log('Profile updated successfully');
     } catch (error) {
@@ -85,23 +79,20 @@ export default function ProfileBack() {
 
 
             <div className="flex items-center justify-center h-full">
-      <label htmlFor="fileInput" className="cursor-pointer">
-        <FontAwesomeIcon icon={faCamera} className="text-gray-500 text-2xl" />
+              <FontAwesomeIcon icon={faCamera} className="text-gray-500 text-2xl" />
+            </div>
+          )}
+        </div>
         <input
           type="file"
           id="fileInput"
           accept="image/*"
           onChange={handleProfilePictureChange}
-          className="hidden"
+          className="mt-2"
         />
-      </label>
-    </div>
-          )}
-        </div>
-
       </div>
 
-      {/* <p>Change Image</p> */}
+      <p>Change image</p>
 
       <div className="flex flex-col">
         <input
@@ -110,23 +101,12 @@ export default function ProfileBack() {
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
         />
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
+       
+ 
         <button
           type="submit"
-          className=" mt-7 px-6 z-30 py-2 bg-[#F61B01] rounded-md text-white relative font-semibold after:-z-20 after:absolute after:h-1 after:w-1 after:bg-red-800 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 hover:[text-shadow:2px_2px_2px_#fda4af]"
           onClick={handleSave}
+          className="mt-7 px-6 z-30 py-2 bg-[#F61B01] rounded-md text-white"
         >
           Save changes
         </button>

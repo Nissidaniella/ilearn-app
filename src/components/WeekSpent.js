@@ -4,7 +4,7 @@ import 'chart.js/auto';
 
 const WeekSpent = () => {
   const [dailyTimeSpent, setDailyTimeSpent] = useState([30, 45, 20, 50, 40, 55, 60]); 
-  const weeksUsed = 5; 
+  const weeksUsed = 1; 
 
   
   const chartData = {

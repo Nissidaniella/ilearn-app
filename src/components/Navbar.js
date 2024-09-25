@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; 
+import { useNavigate, Link } from 'react-router-dom'; 
 import "../index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars} from "@fortawesome/free-solid-svg-icons";
-import { getAuth } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [user, setUser] = useState();
-
-
-
+  const navigate = useNavigate();
+  const auth = getAuth();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -26,6 +25,17 @@ const Navbar = () => {
       });
     }
   }, []);
+
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        // Redirect the user to the login page or home page
+        navigate('/login');
+      })
+      .catch((error) => {
+        console.error('Error signing out:', error);
+      });
+  };
 
   return (
     <>
@@ -45,7 +55,7 @@ const Navbar = () => {
             {isOpen && (
               <div className="dropdown-content">
                 <Link to="/settings">Settings</Link>
-                <Link to="/login">Logout</Link>
+                <Link to="/Login" onClick={handleLogout}>Logout</Link>
               </div>
             )}
           </div>

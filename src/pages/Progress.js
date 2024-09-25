@@ -16,7 +16,7 @@ import DaySpent from "../components/DaySpent";
 import Navbar from "../components/Navbar";
 import image from "../images/logo.png";
 import "../index.css";
-import Reward from "../pages/Reward";
+
 
 export default function Progress() {
   const [activeTab, setActiveTab] = useState("weekSpent");
