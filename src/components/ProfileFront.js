@@ -37,11 +37,7 @@ const ProfileFront = ({
       <div className="profile-image">
         <img src={user.photo} alt="User Profile" />
       </div>
-      <div className="user-name">     
-        <h2>{user.name}</h2>
-        <h2>{user.email}</h2>
-        
-        </div>
+     
         </div>
       ):(
         <div>Loading...</div>
