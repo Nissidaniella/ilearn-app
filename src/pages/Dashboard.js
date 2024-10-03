@@ -98,6 +98,19 @@ export default function Dashboard() {
             </div>
 
             <div class="cards">
+
+              <div class="card english">
+              <div className="card1">
+                  <span className="card-logo">Š</span>
+                  <span className="card-text">Intergrated S <br>
+                  </br><span className="lessons-text">15 Lessons</span></span>
+                </div>
+                <div className="card2">
+                  <span className="rate"> Rate  ⭐5.7 </span>
+                  
+                </div>
+              </div>
+ 
               <div class="card math">
 
                 <div className="card1">
@@ -126,17 +139,9 @@ export default function Dashboard() {
               </div>
 
 
-              <div class="card english">
-              <div className="card1">
-                  <span className="card-logo">Š</span>
-                  <span className="card-text">Intergrated S <br>
-                  </br><span className="lessons-text">15 Lessons</span></span>
-                </div>
-                <div className="card2">
-                  <span className="rate"> Rate  ⭐5.7 </span>
-                  
-                </div>
-              </div>
+              
+
+
             </div>
 
     <div className="video">

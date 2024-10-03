@@ -63,7 +63,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center bg-gradient-to-r from-red-600 to-red-200 h-screen">
+    <div className="flex flex-row items-center justify-center bg-gradient-to-r from-red-600 to-red-200 h-screen signup-container">
       <div className="signup-picture-container">
         <div className="signup-picture">
           <img src={image} alt="Description" />

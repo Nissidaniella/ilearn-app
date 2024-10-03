@@ -67,7 +67,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center bg-gradient-to-r from-gray-900 to-blue-500 h-screen">
+    <div className="flex flex-row items-center justify-center bg-gradient-to-r from-gray-900 to-blue-500 h-screen login-container">
       <div className="login-picture-container">
         <div className="login-picture">
           <img src={image} alt="Login screen illustration" />
